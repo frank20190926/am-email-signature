@@ -168,21 +168,21 @@
   }
 
   .desktop-window {
-    background: #FFFFFF;
+    background: #FDFCF9;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(214, 174, 78, 0.22);
     box-shadow:
-      0 32px 70px rgba(2, 8, 20, 0.55),
-      0 4px 16px rgba(2, 8, 20, 0.25);
+      0 36px 80px rgba(2, 8, 20, 0.62),
+      0 4px 18px rgba(2, 8, 20, 0.28);
     overflow: hidden;
     display: flex;
     flex-direction: column;
   }
 
   .win-chrome {
-    background: #F7F8FA;
-    border-bottom: 1px solid #EAEEF4;
-    padding: 13px 24px;
+    background: linear-gradient(180deg, #F7F5F0 0%, #EFECE4 100%);
+    border-bottom: 1px solid #E4DEC9;
+    padding: 13px 26px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -353,15 +353,16 @@
   }
 
   .calligraphy-row {
-    display: inline-flex;
-    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 4px;
   }
 
   .calligraphy-greeting {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 600;
     color: #9A7220;
     line-height: 1;
@@ -369,9 +370,17 @@
   }
 
   .calligraphy-flourish {
-    width: 138px;
-    height: 9px;
+    width: 132px;
+    height: 8px;
     margin-top: 3px;
+    display: block;
+  }
+
+  .autograph-svg {
+    width: 112px;
+    height: 36px;
+    overflow: visible;
+    opacity: 0.92;
   }
 
   .exec-name {
@@ -498,36 +507,54 @@
   /* Column 3: Sartorial Midnight Navy & Gold Foil Coffee Pass */
   .coffee-ticket {
     width: 196px;
-    background: linear-gradient(160deg, #112448 0%, #081328 100%);
-    border: 1px solid rgba(214, 174, 78, 0.38);
+    background:
+      radial-gradient(circle at 50% 38%, rgba(214, 174, 78, 0.14) 0%, transparent 68%),
+      linear-gradient(160deg, #12264C 0%, #071124 100%);
+    border: 1px solid rgba(214, 174, 78, 0.45);
     border-radius: 16px;
-    padding: 14px 13px 13px;
+    padding: 13px 13px 13px;
     text-align: center;
     position: relative;
     box-shadow:
-      0 16px 32px rgba(6, 16, 34, 0.22),
-      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      0 18px 36px rgba(6, 16, 34, 0.26),
+      inset 0 0 0 3px rgba(214, 174, 78, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.16);
   }
 
   .ticket-header {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 9.5px;
+    justify-content: space-between;
+    font-size: 8.5px;
     font-weight: 800;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #E8C66A;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
+    padding: 0 2px;
   }
 
-  .ticket-header svg {
-    width: 13px;
-    height: 13px;
+  .ticket-header-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .ticket-header-left svg {
+    width: 12px;
+    height: 12px;
     stroke: #E8C66A;
     stroke-width: 1.8;
     fill: none;
+  }
+
+  .ticket-serial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: rgba(246, 230, 188, 0.78);
   }
 
   .ticket-qr-frame {
@@ -1022,14 +1049,29 @@
                 <!-- Column 2: Editorial Bio & Custom 1.5px Vector Contact Matrix -->
                 <td class="bio-col" valign="middle">
                   <div class="calligraphy-row">
-                    <span class="calligraphy-greeting">Cheers &amp; coffee soon,</span>
-                    <svg class="calligraphy-flourish" viewBox="0 0 140 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 7.5C38 2.2 88 1.8 138 6.2" stroke="url(#penGrad)" stroke-width="1.8" stroke-linecap="round"/>
+                    <div>
+                      <span class="calligraphy-greeting">Cheers &amp; coffee soon,</span>
+                      <svg class="calligraphy-flourish" viewBox="0 0 140 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 7.5C38 2.2 88 1.8 138 6.2" stroke="url(#penGrad)" stroke-width="1.8" stroke-linecap="round"/>
+                        <defs>
+                          <linearGradient id="penGrad" x1="2" y1="5" x2="138" y2="5" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#C59B27"/>
+                            <stop offset="75%" stop-color="#D6AE4E" stop-opacity="0.65"/>
+                            <stop offset="100%" stop-color="#D6AE4E" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </div>
+                    <!-- Bespoke Fountain-Pen Calligraphic Autograph ("Tanya") -->
+                    <svg class="autograph-svg" viewBox="0 0 150 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M14 14C34 10 58 8 76 11M42 10C37 22 31 35 28 42C27 44 31 44 36 39" stroke="#112448" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.82"/>
+                      <path d="M44 31C48 25 54 25 53 31C52 35 46 36 45 32C44 29 50 28 54 33C57 36 61 30 64 26C65 30 64 34 65 35C66 36 70 27 73 27C75 27 75 34 78 34C81 34 86 27 88 26C89 31 86 41 81 44C77 46 76 41 82 37C90 32 98 26 102 26C106 26 101 34 105 34C109 34 118 29 128 26" stroke="#112448" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" opacity="0.82"/>
+                      <path d="M22 44C56 38 98 35 142 39" stroke="url(#autoGold)" stroke-width="1.5" stroke-linecap="round"/>
                       <defs>
-                        <linearGradient id="penGrad" x1="2" y1="5" x2="138" y2="5" gradientUnits="userSpaceOnUse">
-                          <stop offset="0%" stop-color="#C59B27"/>
-                          <stop offset="75%" stop-color="#D6AE4E" stop-opacity="0.65"/>
-                          <stop offset="100%" stop-color="#D6AE4E" stop-opacity="0"/>
+                        <linearGradient id="autoGold" x1="22" y1="40" x2="142" y2="40" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#C59B27" stop-opacity="0.2"/>
+                          <stop offset="45%" stop-color="#C59B27" stop-opacity="0.9"/>
+                          <stop offset="100%" stop-color="#C59B27" stop-opacity="0"/>
                         </linearGradient>
                       </defs>
                     </svg>
@@ -1100,8 +1142,11 @@
                 <td width="196" valign="middle" align="center" style="width:196px;">
                   <div class="coffee-ticket">
                     <div class="ticket-header">
-                      <svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
-                      <span>Coffee Pass</span>
+                      <span class="ticket-header-left">
+                        <svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+                        <span>Coffee Pass</span>
+                      </span>
+                      <span class="ticket-serial">No. 08</span>
                     </div>
                     <a class="ticket-qr-frame" href="https://advertisingandmore.com/#contactform" target="_blank">
                       <img src="./assets/qr-luxury-navy.png" alt="Scan for Coffee">
