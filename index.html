@@ -1,56 +1,924 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0B1E3F"><title>A&M — The signature studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;1,600&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
-:root{--navy:#0b1e3f;--blue:#0049a8;--gold:#ffce1b;--paper:#fffdf9;--muted:#637087;--line:#dce0e6}*{box-sizing:border-box}body{margin:0;background:#f4f5f7;color:var(--navy);font:13px Inter,Arial,sans-serif}button,input,select{font:inherit}button,a,input,select{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}button,a{transition:background .18s,transform .18s}button:active{transform:translateY(1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #1671c9;outline-offset:3px}a{color:inherit}button{color:var(--navy)}.top{height:76px;background:var(--navy);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 40px}.brand{display:flex;gap:14px;align-items:center}.brand img{width:42px;height:42px;object-fit:contain;background:var(--gold);border-radius:50%;padding:7px}.brand b{font:800 19px 'Plus Jakarta Sans',sans-serif}.brand small{display:block;color:#bfc9d9;font-size:10px;letter-spacing:1.4px;margin-top:5px}.top-right{font:10px 'JetBrains Mono',monospace;display:flex;gap:28px;align-items:center}.status{color:#ffdf67}.status:before{content:'●';margin-right:8px;font-size:8px}.page{max-width:1512px;margin:auto;padding:32px 36px 20px}.intro{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}.intro h1{font:800 clamp(27px,3vw,43px)/1.15 'Plus Jakarta Sans',sans-serif;letter-spacing:-1.7px;margin:0 0 10px}.intro h1 em{font:600 1.08em 'Playfair Display',serif;letter-spacing:-1px}.intro p{margin:0;color:var(--muted);font-size:13px}.intro-note{font:24px Caveat,cursive;transform:rotate(-5deg);margin-right:20px}.intro-note span{color:var(--blue)}.customizer{background:white;border:1px solid var(--line);border-radius:12px;margin-bottom:28px}.custom-row{display:flex;flex-wrap:wrap;align-items:end;gap:16px;padding:18px 20px}.field{display:flex;flex-direction:column;gap:8px;min-width:0}.field>span,.label{font:10px 'JetBrains Mono',monospace;letter-spacing:.7px;text-transform:uppercase;color:#55647b}.name-field{flex:1.7;min-width:280px}.field.email{flex:1.1;min-width:210px}.field.phone{width:155px}.field.title{flex:1;min-width:190px}input,select{border:1px solid #d9dfe8;background:#fff;color:var(--navy);border-radius:6px;padding:10px;width:100%;min-width:0}.seg{display:flex;background:#eef1f5;padding:3px;border-radius:7px;gap:2px}.seg button{border:0;background:transparent;border-radius:5px;padding:9px 12px;white-space:nowrap;font-size:11px;flex:1}.seg button[aria-pressed=true]{background:var(--navy);color:white}.name-field .seg button:first-child{font-size:10px}.tools{border-top:1px solid #e8ebf0;padding:12px 20px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.tools-left,.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.btn{border:1px solid #cdd4de;background:white;padding:10px 14px;border-radius:6px;font-size:11px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn:hover{background:#edf2f9}.btn.primary{background:var(--navy);border-color:var(--navy);color:white}.btn.primary:hover{background:#203c64}.subtools{display:flex;justify-content:space-between;padding:0 20px 13px;gap:12px;flex-wrap:wrap;font-size:10px;color:var(--muted)}.subtools a{font-weight:600;text-underline-offset:3px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{min-width:0;background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.panel.selected{border-color:#b99a3c}.panel-head{padding:17px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}.concept-title{display:flex;align-items:center;gap:12px}.num{font:11px 'JetBrains Mono',monospace;color:#78849a;border-right:1px solid #d8dde6;padding-right:12px}.panel h2{font:700 14px 'Plus Jakarta Sans',sans-serif;margin:0 0 4px}.panel-head p{font-size:10px;color:var(--muted);margin:0}.choose{border:1px solid #cdd4de;background:white;border-radius:20px;font-size:10px;padding:7px 12px;white-space:nowrap}.choose[aria-pressed=true]{border-color:#ddc77c;background:#fff6d9;color:#6b5110}.stage{background:#eceef2;padding:26px 20px;min-height:302px;display:flex;align-items:center;justify-content:center;overflow:hidden}.sig-wrap{width:640px;max-width:100%;container-type:inline-size}.sig{box-shadow:0 8px 22px #17284c15}.stage.mobile-mode .sig-wrap{max-width:375px}.stage.dark{background:#172132}.panel-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 20px;font-size:10px;color:var(--muted)}.panel-foot button{border:0;background:none;font-size:10px;font-weight:600}.dot{color:#386f54}.preview-body{display:flex;gap:24px;align-items:center;justify-content:center;background:#e9edf2;padding:20px;min-height:330px}.phone-shell{width:218px;flex-shrink:0;background:#111b2d;border-radius:30px;padding:7px;box-shadow:0 8px 16px #132b4722}.phone-screen{border-radius:24px;overflow:hidden;background:white;height:465px;position:relative}.phone-top{display:flex;justify-content:space-between;padding:11px 15px 8px;font-size:9px;font-weight:700}.island{width:60px;height:15px;position:absolute;top:8px;left:calc(50% - 30px);background:#111b2d;border-radius:20px}.mail-nav{padding:10px 14px;border-bottom:1px solid #eee;font-size:10px;color:#1671c9}.phone-content{padding:12px 12px 0}.phone-content h3{font-size:12px;margin:0 0 10px}.mail-by{font-size:8px;color:#67748a;margin-bottom:12px}.mail-text{font-size:9px;line-height:1.5;margin-bottom:14px}.mobile-scaled{width:375px;transform:scale(.48);transform-origin:top left}.phone-content .mobile-scaled{width:375px}.checks{flex:1;max-width:250px}.checks h3{font:700 19px 'Plus Jakarta Sans',sans-serif;margin:0 0 8px}.checks>p{font-size:11px;line-height:1.6;color:var(--muted);margin:0 0 16px}.check{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #d4dce7;font-size:10px;align-items:center}.check span:first-child{color:#387154}.check a{margin-left:auto;text-decoration:none}.checks .btn{margin-top:15px;width:100%}.bottom{display:flex;justify-content:space-between;color:#6d7788;font-size:10px;padding:24px 0 0}.bottom b{color:var(--navy)}.qr svg{display:block;max-width:100%;height:auto}.ticket-notch:before,.ticket-notch:after{content:'';position:absolute;left:-10px;width:18px;height:18px;border-radius:50%;background:#eceef2}.ticket-notch:before{top:-9px}.ticket-notch:after{bottom:-9px}.dark .ticket-notch:before,.dark .ticket-notch:after{background:#172132}.service{cursor:pointer;border:0;background:transparent;color:inherit;font:inherit;padding:0}.service:hover{text-decoration:underline}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:14px 22px;border-radius:8px;z-index:20;max-width:90vw;box-shadow:0 4px 12px #0003}.toast:empty{display:none}dialog{border:0;border-radius:12px;padding:26px;max-width:600px;width:calc(100% - 32px);color:var(--navy)}dialog::backdrop{background:#0b1e3fa8}dialog h2{margin:0 0 15px}dialog p,dialog li{font-size:13px;line-height:1.7}dialog textarea{width:100%;height:170px;font:11px monospace}details summary{cursor:pointer}details .social-fields{display:grid;gap:10px;padding-top:12px}.social-dialog .field{margin:12px 0}.preview-dark .phone-screen{background:#172132;color:#fff}.preview-dark .mail-by{color:#bac5d8}.preview-dark .mail-nav{border-color:#33415a}
-@container(max-width:440px){.sig-main,.sig-stub{display:block!important;width:100%!important;max-width:100%!important}.sig-stub{border-left:0!important;border-top:1px dashed #d5a021!important}.sig-stub .qr{display:inline-block;vertical-align:middle;margin-right:12px!important}.sig-stub .stub-copy{display:inline-block;vertical-align:middle}.ticket-notch:before,.ticket-notch:after{display:none}.sig-name{font-size:21px!important}.sig-main-inner{padding:18px!important}.portrait-col{width:84px!important}.portrait{width:70px!important;height:70px!important}.signature-script{font-size:17px!important}}
-@media(min-width:1600px){.page{padding-top:36px}.stage{padding-top:36px;padding-bottom:36px;min-height:320px}}@media(max-width:1100px){.page{padding:24px}.grid{grid-template-columns:1fr}.stage{padding:30px}.intro-note{display:none}.top{padding:0 24px}.preview-body{gap:40px}.top-right span:first-child{display:none}}@media(max-width:600px){.top{height:68px;padding:0 16px}.top-right{display:none}.brand b{font-size:16px}.page{padding:24px 12px}.intro h1{letter-spacing:-1px}.intro p{font-size:12px;line-height:1.6}.custom-row{padding:16px;gap:14px}.name-field{min-width:100%}.name-field .seg button{padding:9px 5px;font-size:10px}.name-field .seg button:first-child{white-space:normal;max-width:48%}.field.phone,.field.title,.field.email{width:100%;min-width:100%}.tools{padding:12px 16px}.tools-left,.actions{width:100%}.actions .btn{flex:1}.tools-left .seg{flex:1}.tools-left .seg button{font-size:10px;padding:9px 5px}.stage{padding:18px 12px}.panel-head{padding:15px 12px}.panel h2{font-size:12px}.panel-head p{font-size:9px}.choose{padding:7px 8px}.preview-body{gap:16px;flex-wrap:wrap}.checks{max-width:100%;width:100%}.bottom{gap:15px;line-height:1.7}.panel-foot{padding:12px}.sig-wrap{width:100%}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
-</style></head><body>
-<header class="top"><div class="brand"><img src="./assets/logo-mark.png" alt="A&M"><div><b>advertising & more.</b><small>THE SIGNATURE STUDIO</small></div></div><div class="top-right"><span>CREATED FOR TANYA HYACINTH</span><span class="status">A LITTLE MORE UNFORGETTABLE</span></div></header>
-<main class="page"><section class="intro"><div><h1>Great conversations start <em>here.</em></h1><p>Three signatures. One unmistakable personality. A standing invitation for coffee.</p></div><div class="intro-note">Small signature.<br><span>Very big energy. ↙</span></div></section>
-<section class="customizer" aria-label="Live signature customizer"><div class="custom-row"><div class="field name-field"><span>01 / Make it yours</span><div class="seg" id="names"><button data-name="Tanya Hyacinth D’Silva-Fernandez" aria-pressed="true">Tanya Hyacinth D’Silva-Fernandez</button><button data-name="Tanya Hyacinth" aria-pressed="false">Tanya Hyacinth</button><button data-name="Tania Hyacinth" aria-pressed="false">Tania</button></div></div><label class="field title"><span>Title</span><input id="title" value="Chief Executive Officer (CEO)" maxlength="90"></label><label class="field phone"><span>Phone / WhatsApp</span><input id="phone" type="tel" value="+60 12-345 6789" maxlength="30"></label><label class="field email"><span>Email address</span><input id="email" type="email" value="hello@advertisingandmore.com" maxlength="100"></label></div>
-<div class="tools"><div class="tools-left"><div class="seg" id="view"><button data-view="desktop" aria-pressed="true">▱ Desktop Mail · 640px</button><button data-view="mobile" aria-pressed="false">▯ Mobile · 375px</button></div><div class="seg" id="theme"><button data-dark="false" aria-pressed="true">☀ Light Inbox</button><button data-dark="true" aria-pressed="false">☾ Dark Inbox</button></div></div><div class="actions"><button class="btn primary" id="copy-rich">▣ Copy rendered signature</button><button class="btn" id="copy-raw">&lt;/&gt; Copy email HTML</button></div></div>
-<div class="subtools"><span id="selection-label">Copying: 01 — Golden Espresso · Gmail / Apple Mail</span><span><a href="tanya-signature-email-ready.html" id="standalone" target="_blank">Open standalone email-ready file ↗</a> &nbsp;·&nbsp; <button class="service" id="setup">Assets, social links & installation</button></span></div></section>
-<section class="grid" aria-label="Signature concepts"><article class="panel selected" data-panel="0"><div class="panel-head"><div class="concept-title"><span class="num">01</span><div><h2>The Golden Espresso</h2><p>A VIP coffee pass. An invitation worth keeping.</p></div></div><button class="choose" data-select="0" aria-pressed="true">✓ Selected</button></div><div class="stage"><div class="sig-wrap" id="concept0"></div></div><div class="panel-foot"><span>● &nbsp;THE CONVERSATION STARTER</span><button data-copy="0">Copy this signature ↗</button></div></article>
-<article class="panel" data-panel="1"><div class="panel-head"><div class="concept-title"><span class="num">02</span><div><h2>The Agency Editorial</h2><p>Big ideas. Bold colour. Front-page personality.</p></div></div><button class="choose" data-select="1" aria-pressed="false">Use this design</button></div><div class="stage"><div class="sig-wrap" id="concept1"></div></div><div class="panel-foot"><span>● &nbsp;THE BOLD FIRST IMPRESSION</span><button data-copy="1">Copy this signature ↗</button></div></article>
-<article class="panel" data-panel="2"><div class="panel-head"><div class="concept-title"><span class="num">03</span><div><h2>The Boardroom, With Heart</h2><p>Executive presence. A personal touch.</p></div></div><button class="choose" data-select="2" aria-pressed="false">Use this design</button></div><div class="stage"><div class="sig-wrap" id="concept2"></div></div><div class="panel-foot"><span>● &nbsp;THE QUIETLY CONFIDENT ONE</span><button data-copy="2">Copy this signature ↗</button></div></article>
-<article class="panel"><div class="panel-head"><div class="concept-title"><span class="num">04</span><div><h2>Good on every screen.</h2><p>Live mobile preview · your selected signature</p></div></div><span class="label">375 PX</span></div><div class="preview-body" id="preview-body"><div class="phone-shell"><div class="phone-screen"><div class="phone-top"><span>9:41</span><span>▮▮▮ ▰</span></div><div class="island"></div><div class="mail-nav">‹ Inbox <span style="float:right">↶ &nbsp; ♧</span></div><div class="phone-content"><h3>Shall we make something great?</h3><div class="mail-by">Tanya Hyacinth &nbsp; → &nbsp; You</div><div class="mail-text">Hi there,<br>Big ideas are better over coffee.<br>Let's bring yours to life.</div><div class="mobile-scaled"><div class="sig-wrap" id="mobile-preview"></div></div></div></div></div><div class="checks"><h3>Small screen.<br>Same big personality.</h3><p>A real 375px layout, scaled to fit.<br>Scan the QR. Try the links.</p><div class="check"><span>✓</span> Coffee QR destination <a id="qr-test" target="_blank" rel="noopener" href="https://advertisingandmore.com/#contactform" aria-label="Test coffee destination">↗</a></div><div class="check"><span>✓</span> Email & phone links <a id="email-test" href="mailto:hello@advertisingandmore.com" aria-label="Test email link">↗</a></div><div class="check"><span>✓</span> WhatsApp, one tap away <a id="wa-test" target="_blank" rel="noopener" href="https://wa.me/60123456789" aria-label="Test WhatsApp link">↗</a></div><div class="check"><span>✓</span> Fluid, stacked mobile layout</div><button class="btn" id="verify">Check all links & layout ↗</button></div></div><div class="panel-foot"><span class="dot">● &nbsp;LIVE PREVIEW · NOT A SCREENSHOT</span><button id="mobile-copy">Copy selected ↗</button></div></article></section>
-<footer class="bottom"><span><b>A&M</b> &nbsp; Everything under one happy roof.</span><span>Designed to be remembered. Built to start a conversation. &nbsp; ↗</span></footer></main><div class="toast" role="status" aria-live="polite" id="toast"></div>
-<dialog id="settings" class="social-dialog"><h2>A minute to make it yours.</h2><p>1. Choose a design and update your details.<br>2. Copy the rendered signature.<br>3. Paste into Gmail → Settings → Signature, or Apple Mail → Settings → Signatures. In Apple Mail, turn off “Always match my default message font”. Save your changes.</p><p>Outlook: paste the rendered version into Settings → Accounts → Signatures. The HTML export uses email tables and system-font fallbacks. Test a message in your own client before using it daily.</p><label class="field"><span>Images in copied HTML</span><select id="asset-mode"><option value="remote">Client website absolute URLs (Gmail / Outlook)</option><option value="local">Local assets (local preview / development only)</option></select></label><p style="font-size:11px">Website image URLs are supplied by the brief; confirm they are publicly hosted before installing. The QR is built into the email as HTML cells, so it has no external image dependency. Inbox dark mode here is a simulation; email apps may recolour messages differently.</p><details><summary>Social profiles — add confirmed links</summary><div class="social-fields"><label class="field"><span>LinkedIn</span><input id="linkedin" type="url" value="https://www.linkedin.com/in/tanyahyacinthfernandez"></label><label class="field"><span>Instagram</span><input id="instagram" type="url" placeholder="https://www.instagram.com/your-profile"></label><label class="field"><span>Facebook</span><input id="facebook" type="url" placeholder="https://www.facebook.com/your-page"></label><small>Unconfigured profiles are omitted from exported signatures. The website did not provide usable Instagram or Facebook destinations.</small></div></details><p>Phone number is the brief’s example. Replace it with your real contact number before installing.</p><button class="btn primary" id="close-settings">Done</button></dialog>
-<dialog id="result"><h2 id="result-title">Ready to copy</h2><div id="result-body"></div><button class="btn primary" id="close-result">Close</button></dialog>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertising &amp; More (A&amp;M) | Tanya Hyacinth Email Signature Suite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --am-navy: #0B1E3F;
+    --am-navy-mid: #162B54;
+    --am-blue: #0049A8;
+    --am-blue-bright: #1671C9;
+    --am-yellow: #FFCE1B;
+    --am-gold: #D5A021;
+    --am-cream: #FFFDF9;
+    --am-sand: #F4EFE6;
+    --am-border: #E2E8F0;
+    --am-text: #0F172A;
+    --am-muted: #475569;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #EEF2F6;
+    color: var(--am-text);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 20px 24px 28px;
+  }
+
+  .workspace {
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+
+  /* Single-Line Commercial Top Utility Bar */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--am-navy);
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 26px rgba(11, 30, 63, 0.14);
+    gap: 12px;
+    white-space: nowrap;
+  }
+
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+  }
+
+  .brand-lockup img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  .brand-lockup .brand-title {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+
+  .brand-lockup .brand-sub {
+    font-size: 11px;
+    color: #94A3B8;
+    font-weight: 500;
+  }
+
+  .toolbar-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .control-pill {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    padding: 3px;
+    gap: 3px;
+  }
+
+  .control-pill button {
+    background: transparent;
+    border: none;
+    color: #CBD5E1;
+    font-family: inherit;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 5px 9px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+
+  .control-pill button.active {
+    background: var(--am-yellow);
+    color: var(--am-navy);
+    font-weight: 700;
+  }
+
+  .inline-input {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    padding: 5px 9px;
+    gap: 6px;
+  }
+
+  .inline-input label {
+    font-size: 10.5px;
+    color: #94A3B8;
+    font-weight: 600;
+  }
+
+  .inline-input input {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    width: 98px;
+    outline: none;
+  }
+
+  .btn-copy-primary {
+    background: var(--am-yellow);
+    color: var(--am-navy);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 13px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(255, 206, 27, 0.25);
+    white-space: nowrap;
+  }
+
+  .btn-html-link {
+    color: #E2E8F0;
+    text-decoration: none;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 7px 11px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
+  }
+
+  /* Main Stage Grid: Balanced Left Desktop Mail + Right Mobile & Spec Stack */
+  .main-stage {
+    display: grid;
+    grid-template-columns: 1fr 390px;
+    gap: 22px;
+    align-items: stretch;
+  }
+
+  .mail-window {
+    background: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mail-window.dark-client {
+    background: #111827;
+    border-color: #1F2937;
+    color: #F8FAFC;
+  }
+
+  .mail-titlebar {
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+    padding: 11px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mail-window.dark-client .mail-titlebar {
+    background: #1E293B;
+    border-bottom-color: #334155;
+  }
+
+  .window-dots {
+    display: flex;
+    gap: 7px;
+  }
+
+  .window-dots span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+  }
+
+  .dot-r { background: #EF4444; }
+  .dot-y { background: #F59E0B; }
+  .dot-g { background: #10B981; }
+
+  .mail-meta-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #64748B;
+  }
+
+  .mail-window.dark-client .mail-meta-title {
+    color: #94A3B8;
+  }
+
+  .mail-header-bar {
+    padding: 14px 26px 12px;
+    border-bottom: 1px solid #F1F5F9;
+    font-size: 13px;
+  }
+
+  .mail-window.dark-client .mail-header-bar {
+    border-bottom-color: #1E293B;
+  }
+
+  .mail-subject {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: var(--am-navy);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mail-window.dark-client .mail-subject {
+    color: #F8FAFC;
+  }
+
+  .mail-participants {
+    color: #64748B;
+    font-size: 12px;
+  }
+
+  .mail-body-compose {
+    padding: 16px 26px 22px;
+    flex: 1;
+  }
+
+  .email-prose {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #334155;
+    margin-bottom: 14px;
+  }
+
+  .mail-window.dark-client .email-prose {
+    color: #CBD5E1;
+  }
+
+  .section-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px;
+  }
+
+  .section-bar h2 {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--am-navy);
+    letter-spacing: -0.01em;
+  }
+
+  .mail-window.dark-client .section-bar h2 {
+    color: #F8FAFC;
+  }
+
+  .section-bar .btn-mini-copy {
+    background: #F1F5F9;
+    color: var(--am-navy);
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 5px 11px;
+    font-size: 11.5px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .divider-rule {
+    height: 1px;
+    background: #E2E8F0;
+    margin: 18px 0 14px;
+  }
+
+  .mail-window.dark-client .divider-rule {
+    background: #1E293B;
+  }
+
+  /* Right Column Stack: Phone + Quick Compatibility Spec Card */
+  .right-col-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .phone-shell {
+    background: #0B1E3F;
+    border-radius: 34px;
+    padding: 11px;
+    box-shadow: 0 18px 40px rgba(11, 30, 63, 0.20);
+    border: 3px solid #1E3A6D;
+  }
+
+  .phone-screen {
+    background: #FFFFFF;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .phone-statusbar {
+    background: #F8FAFC;
+    padding: 9px 18px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0F172A;
+    border-bottom: 1px solid #E2E8F0;
+  }
+
+  .phone-notch {
+    width: 72px;
+    height: 16px;
+    background: #0F172A;
+    border-radius: 99px;
+  }
+
+  .phone-mail-head {
+    padding: 10px 15px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .phone-mail-head .subj {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--am-navy);
+  }
+
+  .phone-mail-head .from {
+    font-size: 11px;
+    color: #64748B;
+    margin-top: 2px;
+  }
+
+  .phone-mail-body {
+    padding: 10px 13px 14px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #334155;
+  }
+
+  .spec-card {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  }
+
+  .spec-card h3 {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--am-navy);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .spec-item {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .spec-item strong {
+    display: block;
+    color: var(--am-blue);
+    font-size: 11.5px;
+    margin-bottom: 1px;
+  }
+
+  .color-swatches {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid #F1F5F9;
+    font-size: 11px;
+    font-weight: 700;
+    color: #475569;
+  }
+
+  .swatch-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 10.5px;
+  }
+
+  .swatch-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .toast-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 24px;
+    background: var(--am-navy);
+    color: #FFFFFF;
+    border-left: 4px solid var(--am-yellow);
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(11, 30, 63, 0.28);
+    display: none;
+    z-index: 99;
+  }
+</style>
+</head>
+<body>
+
+<div class="workspace">
+  <!-- Single-Line Commercial Top Utility Bar -->
+  <header class="topbar">
+    <div class="brand-lockup">
+      <img src="./assets/coffee-cup.png" alt="Advertising & More Coffee Cup">
+      <div>
+        <div class="brand-title">Advertising &amp; More Sdn. Bhd. (A&amp;M)</div>
+        <div class="brand-sub">Executive Email Signature Suite · Tanya Hyacinth D’Silva-Fernandez</div>
+      </div>
+    </div>
+
+    <div class="toolbar-controls">
+      <div class="control-pill" role="group" aria-label="Name format">
+        <button type="button" class="active" data-name="Tanya Hyacinth D’Silva-Fernandez">Full Name</button>
+        <button type="button" data-name="Tanya Hyacinth">Tanya Hyacinth</button>
+        <button type="button" data-name="Tania Hyacinth">Tania</button>
+      </div>
+
+      <div class="inline-input">
+        <label for="phone-input">Tel</label>
+        <input id="phone-input" type="text" value="+60 12-345 6789">
+      </div>
+
+      <div class="inline-input">
+        <label for="email-input">Mail</label>
+        <input id="email-input" type="text" value="hello@advertisingandmore.com" style="width:148px;">
+      </div>
+
+      <div class="control-pill" role="group" aria-label="Inbox theme">
+        <button type="button" class="active" id="btn-light">Light</button>
+        <button type="button" id="btn-dark">Dark</button>
+      </div>
+
+      <button type="button" class="btn-copy-primary" id="copy-ed1">
+        <span>Copy Signature</span>
+      </button>
+      <a class="btn-html-link" href="./tanya-signature-email-ready.html">HTML Code ↗</a>
+    </div>
+  </header>
+
+  <div class="main-stage">
+    <!-- Left Column: Desktop Email Client Displaying Both Signature Editions at Full Proportional Width -->
+    <div class="mail-window" id="desktop-mail-window">
+      <div>
+        <div class="mail-titlebar">
+          <div class="window-dots">
+            <span class="dot-r"></span>
+            <span class="dot-y"></span>
+            <span class="dot-g"></span>
+          </div>
+          <div class="mail-meta-title">Desktop Email Client Preview (Gmail / Outlook / Apple Mail HTML Table)</div>
+          <div style="font-size:11.5px;font-weight:700;color:#0049A8;">Interactive Links &amp; Scannable QR</div>
+        </div>
+
+        <div class="mail-header-bar">
+          <div class="mail-subject">
+            <span>Re: Q4 Integrated Brand Campaign &amp; Media Buying Proposal</span>
+            <span style="font-size:11.5px;font-weight:600;color:#64748B;">Today, 10:42 AM</span>
+          </div>
+          <div class="mail-participants">
+            <strong>From:</strong> <span class="js-name">Tanya Hyacinth D’Silva-Fernandez</span> &lt;<span class="js-email">hello@advertisingandmore.com</span>&gt; &nbsp;|&nbsp; <strong>To:</strong> Brand Marketing Director
+          </div>
+        </div>
+
+        <div class="mail-body-compose">
+          <p class="email-prose">
+            Hi Sarah,<br>
+            It was a pleasure speaking with your team earlier. I have attached our integrated media, creative, and experiential roadmap tailored for your upcoming launch. Take a look when you have a moment, and click the coffee cup below whenever you are ready to chat over a fresh cup!
+          </p>
+
+          <!-- =================================================================
+               EDITION A: THE ESPRESSO DESK (3-Column Table + Campaign Ribbon)
+               ================================================================= -->
+          <div id="sig-edition-a">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:880px;border-collapse:separate;border-spacing:0;background:#FFFDF9;border:1.5px solid #E5DEC9;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(11,30,63,0.08);font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;">
+              <tr>
+                <td colspan="3" height="5" style="height:5px;background:linear-gradient(90deg,#0B1E3F 0%,#0049A8 62%,#FFCE1B 62%,#D5A021 100%);font-size:0;line-height:0;">&nbsp;</td>
+              </tr>
+              <tr>
+                <!-- Column 1: Portrait + 100% Success Rate Seal + Handwritten Sign-off -->
+                <td width="175" valign="middle" align="center" style="width:175px;padding:18px 14px 14px 18px;background:#FBF7EE;border-right:1px solid #EBE3D0;">
+                  <div style="position:relative;width:112px;height:112px;margin:0 auto 8px;">
+                    <img src="./assets/tanya-avatar-cream.png" width="112" height="112" alt="Tanya Hyacinth" style="display:block;width:112px;height:112px;border-radius:50%;">
+                    <div style="position:absolute;bottom:-4px;right:-6px;background:linear-gradient(135deg,#FFCE1B,#C99618);color:#0B1E3F;border:2px solid #FFFDF9;border-radius:99px;padding:2px 8px;font-size:9px;font-weight:800;letter-spacing:0.02em;box-shadow:0 3px 8px rgba(11,30,63,0.22);white-space:nowrap;">
+                      ★ 100% SUCCESS
+                    </div>
+                  </div>
+                  <div style="font-family:'Caveat',cursive;font-size:23px;font-weight:700;color:#0049A8;line-height:1.05;margin-top:6px;">
+                    Warmly, Tanya
+                  </div>
+                  <div style="font-size:9.5px;font-weight:700;color:#85681A;letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;">
+                    Coffee Enthusiast
+                  </div>
+                </td>
+
+                <!-- Column 2: Executive Details + Clickable Contact Grid -->
+                <td valign="middle" style="padding:16px 22px 14px 22px;background:#FFFDF9;">
+                  <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
+                    <img src="./assets/logo-mark.png" width="17" height="17" alt="A&M" style="display:inline-block;width:17px;height:17px;vertical-align:middle;">
+                    <span style="font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#0049A8;">Advertising &amp; More Sdn. Bhd.</span>
+                  </div>
+
+                  <div class="js-name" style="font-size:21px;font-weight:800;color:#0B1E3F;letter-spacing:-0.02em;line-height:1.18;">
+                    Tanya Hyacinth D’Silva-Fernandez
+                  </div>
+                  <div style="margin-top:5px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+                    <span style="display:inline-block;background:#0B1E3F;color:#FFCE1B;font-size:10px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:3.5px 9px;border-radius:5px;">Chief Executive Officer (CEO)</span>
+                    <span style="font-size:11.5px;font-weight:700;color:#475569;">Integrated Advertising &amp; Marketing Agency</span>
+                  </div>
+
+                  <!-- 2-Column Contact Matrix -->
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="font-size:12.5px;line-height:1.5;color:#1E293B;margin-bottom:10px;">
+                    <tr>
+                      <td style="padding-bottom:6px;padding-right:12px;">
+                        <a class="js-phone-href" href="tel:+60123456789" style="color:#0B1E3F;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:7px;">
+                          <span style="display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;background:#EBF2FC;color:#0049A8;font-size:11px;font-weight:800;">✆</span>
+                          <span class="js-phone">+60 12-345 6789</span>
+                        </a>
+                        &nbsp;
+                        <a class="js-wa-href" href="https://wa.me/60123456789" target="_blank" style="display:inline-block;background:#DCFCE7;color:#166534;font-size:10px;font-weight:800;padding:2px 6px;border-radius:4px;text-decoration:none;">WhatsApp ↗</a>
+                      </td>
+                      <td style="padding-bottom:6px;">
+                        <a href="https://advertisingandmore.com" target="_blank" style="color:#0049A8;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:7px;">
+                          <span style="display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;background:#FFF4CC;color:#B47B00;font-size:11px;font-weight:800;">🌐</span>
+                          <span>www.advertisingandmore.com</span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="padding-bottom:2px;">
+                        <a class="js-email-href" href="mailto:hello@advertisingandmore.com" style="color:#0B1E3F;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:7px;">
+                          <span style="display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;background:#EBF2FC;color:#0049A8;font-size:11px;font-weight:800;">✉</span>
+                          <span class="js-email">hello@advertisingandmore.com</span>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Social Icons + Tagline -->
+                  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px dashed #E2D9C5;">
+                    <div style="display:flex;align-items:center;gap:6px;">
+                      <a href="https://advertisingandmore.com" target="_blank" title="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#0B1E3F;color:#FFFFFF;font-size:10.5px;font-weight:800;text-decoration:none;">in</a>
+                      <a href="https://advertisingandmore.com" target="_blank" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#0B1E3F;color:#FFFFFF;font-size:10.5px;font-weight:800;text-decoration:none;">ig</a>
+                      <a href="https://advertisingandmore.com" target="_blank" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#0B1E3F;color:#FFFFFF;font-size:10.5px;font-weight:800;text-decoration:none;">f</a>
+                      <span style="font-size:11px;font-weight:700;color:#64748B;margin-left:4px;">"Five simple steps, a lot of heart, and just enough caffeine."</span>
+                    </div>
+                  </div>
+                </td>
+
+                <!-- Column 3: Integrated "Click For Coffee" Coaster & Scannable QR -->
+                <td width="196" valign="middle" align="center" style="width:196px;padding:14px 16px;background:#0B1E3F;color:#FFFFFF;border-left:2px dashed #FFCE1B;">
+                  <div style="font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#FFCE1B;margin-bottom:6px;">
+                    ☕ COFFEE IS ON US
+                  </div>
+                  <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-block;background:#FFFFFF;padding:5px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.28);text-decoration:none;">
+                    <img src="./assets/qr-coffee-navy.png" width="96" height="96" alt="Scan for Coffee" style="display:block;width:96px;height:96px;border-radius:6px;">
+                  </a>
+                  <div style="font-size:9.5px;color:#CBD5E1;margin-top:5px;margin-bottom:8px;">
+                    Scan or click to book a chat
+                  </div>
+                  <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#FFCE1B;color:#0B1E3F;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.02em;padding:7px 12px;border-radius:99px;text-decoration:none;box-shadow:0 4px 12px rgba(255,206,27,0.35);white-space:nowrap;">
+                    <img src="./assets/coffee-cup.png" width="18" height="18" alt="" style="display:inline-block;width:18px;height:18px;">
+                    <span>Click For Coffee</span>
+                  </a>
+                </td>
+              </tr>
+
+              <!-- Single-Line WiseStamp-Style Promotional Agency Footer Banner -->
+              <tr>
+                <td colspan="3" style="background:#0049A8;padding:8px 20px;color:#FFFFFF;font-size:11px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td align="left" style="color:#FFFFFF;font-weight:700;white-space:nowrap;">
+                        <span style="color:#FFCE1B;font-weight:800;">Everything under one happy roof:</span> Digital · Media Buying · PR · Events · Creative
+                      </td>
+                      <td align="right" style="color:#DBEAFE;font-size:10.5px;font-weight:700;white-space:nowrap;">
+                        Trusted by AirAsia · Airbnb · P&amp;G · Celcom · Warner
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="divider-rule"></div>
+
+          <!-- =================================================================
+               EDITION B: THE ROYAL BLUE AGENCY BANNER (Horizontal Split Layout)
+               ================================================================= -->
+          <div class="section-bar">
+            <h2>Alternative Layout: Executive Horizontal Card + Espresso Action Strip</h2>
+            <button type="button" class="btn-mini-copy" id="copy-ed2">Copy Horizontal Edition</button>
+          </div>
+
+          <div id="sig-edition-b">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:880px;border-collapse:separate;border-spacing:0;background:#FFFFFF;border:1.5px solid #CBD5E1;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(11,30,63,0.06);font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;">
+              <tr>
+                <td style="padding:15px 22px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td width="94" valign="middle" style="width:94px;padding-right:16px;">
+                        <img src="./assets/tanya-avatar-navy.png" width="84" height="84" alt="Tanya Hyacinth" style="display:block;width:84px;height:84px;border-radius:50%;">
+                      </td>
+                      <td valign="middle" style="border-left:3px solid #FFCE1B;padding-left:16px;">
+                        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+                          <span class="js-name" style="font-size:18.5px;font-weight:800;color:#0B1E3F;">Tanya Hyacinth D’Silva-Fernandez</span>
+                          <span style="font-family:'Caveat',cursive;font-size:21px;font-weight:700;color:#0049A8;">"We want something people remember!"</span>
+                        </div>
+                        <div style="font-size:11.5px;font-weight:700;color:#0049A8;margin-top:2px;margin-bottom:8px;">
+                          Chief Executive Officer (CEO) &nbsp;·&nbsp; Advertising &amp; More Sdn. Bhd. &nbsp;·&nbsp; <span style="color:#B47B00;">★ 100% Success Rate</span>
+                        </div>
+                        <div style="font-size:12px;color:#334155;font-weight:600;">
+                          <a class="js-phone-href" href="tel:+60123456789" style="color:#0B1E3F;text-decoration:none;"><strong style="color:#0049A8;">Tel:</strong> <span class="js-phone">+60 12-345 6789</span></a>
+                          &nbsp;&nbsp;|&nbsp;&nbsp;
+                          <a class="js-email-href" href="mailto:hello@advertisingandmore.com" style="color:#0B1E3F;text-decoration:none;"><strong style="color:#0049A8;">Mail:</strong> <span class="js-email">hello@advertisingandmore.com</span></a>
+                          &nbsp;&nbsp;|&nbsp;&nbsp;
+                          <a href="https://advertisingandmore.com" target="_blank" style="color:#0049A8;text-decoration:none;font-weight:700;">www.advertisingandmore.com</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="background:#0B1E3F;padding:10px 22px;border-top:2px solid #FFCE1B;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tr>
+                      <td valign="middle">
+                        <div style="display:flex;align-items:center;gap:12px;">
+                          <img src="./assets/coffee-cup.png" width="34" height="34" alt="Coffee">
+                          <div>
+                            <div style="font-size:12.5px;font-weight:800;color:#FFFFFF;">
+                              Your every Need. Idea. Brand. Right here, ready to ROCK!
+                            </div>
+                            <div style="font-size:10.5px;color:#93C5FD;font-weight:600;">
+                              Scan the QR code or click the button to schedule a coffee chat with Tanya.
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td align="right" valign="middle" width="240" style="width:240px;white-space:nowrap;">
+                        <div style="display:inline-flex;align-items:center;gap:10px;">
+                          <a href="https://advertisingandmore.com/#contactform" target="_blank" style="background:#FFCE1B;color:#0B1E3F;font-size:11px;font-weight:800;text-transform:uppercase;padding:8px 14px;border-radius:99px;text-decoration:none;">
+                            ☕ Click For Coffee ↗
+                          </a>
+                          <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-block;background:#FFFFFF;padding:3px;border-radius:7px;">
+                            <img src="./assets/qr-coffee-navy.png" width="52" height="52" alt="QR" style="display:block;width:52px;height:52px;">
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: iPhone Mail Mobile View + Compatibility & Brand Spec Card -->
+    <div class="right-col-stack">
+      <div class="phone-shell">
+        <div class="phone-screen">
+          <div class="phone-statusbar">
+            <span>9:41</span>
+            <div class="phone-notch"></div>
+            <span>5G · 100%</span>
+          </div>
+          <div class="phone-mail-head">
+            <div class="subj">Re: Q4 Integrated Brand Campaign</div>
+            <div class="from">From: <strong class="js-name">Tanya Hyacinth D’Silva-Fernandez</strong></div>
+          </div>
+          <div class="phone-mail-body">
+            <p style="margin-bottom:10px;">
+              Hi Sarah, attached is our deck. Let's grab a coffee this week and make it happen!
+            </p>
+
+            <!-- Mobile Stacked Signature Card -->
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;background:#FFFDF9;border:1.5px solid #E5DEC9;border-radius:14px;overflow:hidden;font-family:'Plus Jakarta Sans',Arial,sans-serif;">
+              <tr>
+                <td height="4" style="height:4px;background:linear-gradient(90deg,#0B1E3F 0%,#0049A8 60%,#FFCE1B 60%);font-size:0;">&nbsp;</td>
+              </tr>
+              <tr>
+                <td style="padding:13px;">
+                  <div style="display:flex;align-items:center;gap:11px;margin-bottom:9px;">
+                    <img src="./assets/tanya-avatar-cream.png" width="66" height="66" alt="Tanya" style="width:66px;height:66px;border-radius:50%;flex-shrink:0;">
+                    <div>
+                      <div style="font-size:9.5px;font-weight:800;color:#0049A8;text-transform:uppercase;letter-spacing:0.06em;">Advertising &amp; More</div>
+                      <div class="js-name" style="font-size:14.5px;font-weight:800;color:#0B1E3F;line-height:1.2;">Tanya Hyacinth D’Silva-Fernandez</div>
+                      <div style="display:inline-block;background:#FFCE1B;color:#0B1E3F;font-size:9.5px;font-weight:800;padding:2px 6px;border-radius:4px;margin-top:3px;">
+                        CEO · 100% Success Rate
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="font-size:11px;line-height:1.6;color:#1E293B;padding:7px 10px;background:#FBF7EE;border-radius:8px;margin-bottom:9px;">
+                    <div><strong style="color:#0049A8;">Call / WA:</strong> <span class="js-phone">+60 12-345 6789</span></div>
+                    <div><strong style="color:#0049A8;">Email:</strong> <span class="js-email">hello@advertisingandmore.com</span></div>
+                    <div><strong style="color:#0049A8;">Website:</strong> advertisingandmore.com</div>
+                  </div>
+
+                  <div style="display:flex;align-items:center;justify-content:space-between;background:#0B1E3F;padding:9px 11px;border-radius:10px;color:#FFFFFF;">
+                    <div style="padding-right:8px;">
+                      <div style="font-family:'Caveat',cursive;font-size:18px;color:#FFCE1B;line-height:1;">Warmly, Tanya</div>
+                      <div style="font-size:9.5px;color:#CBD5E1;margin:2px 0 6px;">Scan or tap for coffee:</div>
+                      <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:#FFCE1B;color:#0B1E3F;font-size:10px;font-weight:800;padding:5px 9px;border-radius:99px;text-decoration:none;">
+                        <img src="./assets/coffee-cup.png" width="14" height="14" alt="">
+                        <span>CLICK FOR COFFEE</span>
+                      </a>
+                    </div>
+                    <a href="https://advertisingandmore.com/#contactform" target="_blank" style="background:#FFFFFF;padding:4px;border-radius:8px;flex-shrink:0;">
+                      <img src="./assets/qr-coffee-navy.png" width="64" height="64" alt="QR" style="display:block;width:64px;height:64px;">
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical & Brand Delivery Spec Card -->
+      <div class="spec-card">
+        <h3>
+          <span>Email Client Compatibility &amp; Deliverables</span>
+          <span style="font-size:11px;color:#166534;background:#DCFCE7;padding:2px 7px;border-radius:99px;">Verified HTML Table</span>
+        </h3>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <strong>Desktop &amp; Mobile</strong>
+            Gmail, Outlook, Apple Mail, iOS Mail
+          </div>
+          <div class="spec-item">
+            <strong>Scannable QR Code</strong>
+            Routes to #contactform CTA
+          </div>
+          <div class="spec-item">
+            <strong>Interactive Links</strong>
+            Tel, WhatsApp, Email, Web, Social
+          </div>
+          <div class="spec-item">
+            <strong>Editable Source</strong>
+            HTML Table + High-Res PNG/SVG
+          </div>
+        </div>
+        <div class="color-swatches">
+          <span>Brand Palette:</span>
+          <span class="swatch-pill"><span class="swatch-dot" style="background:#0B1E3F;"></span>#0B1E3F</span>
+          <span class="swatch-pill"><span class="swatch-dot" style="background:#0049A8;"></span>#0049A8</span>
+          <span class="swatch-pill"><span class="swatch-dot" style="background:#FFCE1B;"></span>#FFCE1B</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-banner" id="toast">Signature copied to clipboard! Paste directly into Gmail, Apple Mail, or Outlook.</div>
+
 <script>
-const QR_MATRIX=[[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-const COFFEE='https://advertisingandmore.com/#contactform', SITE='https://advertisingandmore.com';
-const state={name:'Tanya Hyacinth D’Silva-Fernandez',title:'Chief Executive Officer (CEO)',phone:'+60 12-345 6789',email:'hello@advertisingandmore.com',selected:0,dark:false,view:'desktop',asset:'remote',linkedin:'https://www.linkedin.com/in/tanyahyacinthfernandez',instagram:'',facebook:''};
-const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const labels=['Golden Espresso','Agency Editorial','Boardroom, With Heart'];
-function asset(name,exporting){return exporting&&state.asset==='remote'?'https://advertisingandmore.com/wp-content/uploads/2026/07/'+name:'./assets/'+name}
-function link(url,text,style=''){return `<a href="${esc(url)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;${style}">${text}</a>`}
-function qr(email=false){if(email){let rows=QR_MATRIX.map(row=>{let cells='',start=0;for(let x=1;x<=row.length;x++){if(x===row.length||row[x]!==row[start]){cells+=`<td colspan="${x-start}" width="${(x-start)*2}" bgcolor="${row[start]?'#0B1E3F':'#FFFFFF'}" ></td>`;start=x}}return `<tr style="height:2px">${cells}</tr>`}).join('');return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="90" style="width:90px;border-collapse:collapse;table-layout:fixed;background:#fff;font-size:0;line-height:0"><colgroup>${'<col width="2" style="width:2px">'.repeat(45)}</colgroup>${rows}</table>`}
-let path='';QR_MATRIX.forEach((row,y)=>row.forEach((v,x)=>{if(v)path+=`M${x} ${y}h1v1h-1z`}));return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" width="108" height="108" role="img" aria-label="Scan to visit the A&M coffee contact form" shape-rendering="crispEdges"><rect width="45" height="45" fill="#fff"/><path d="${path}" fill="#0b1e3f"/><rect x="20" y="20" width="5" height="5" rx="1" fill="#ffce1b"/><path d="M21 21.5h2v1.4q-1 1-2 0zM23 21.7h.7v.7H23" fill="#0b1e3f"/></svg>`}
-function socials(exporting,color){return ['linkedin','instagram','facebook'].map((s,i)=>{let v=state[s];if(!v)return exporting?'':`<button class="service social-setup" aria-label="Configure ${s}" style="color:${color};opacity:.65;font-size:10px;border:1px solid currentColor;border-radius:50%;width:21px;height:21px;margin-right:5px">${['in','◎','f'][i]}</button>`;return link(v,['in','◎','f'][i],`display:inline-block;text-align:center;border:1px solid ${color};border-radius:50%;width:20px;line-height:20px;font:bold 11px/20px Arial;color:${color};margin-right:5px`)}).join('')}
-function signature(n,exporting=false){let editorial=n===1,luxury=n===2,bg=editorial?'#0049a8':'#fffdf9',ink=editorial?'#ffffff':'#0b1e3f',muted=editorial?'#dae7fc':'#526078';let phone=state.phone.replace(/[^+\d]/g,''),wa=state.phone.replace(/\D/g,''),short=state.name.startsWith('Tania')?'Tania':'Tanya';let title=esc(state.title),name=esc(state.name);
-let contact=`<div style="font:11px/1.85 Arial,sans-serif;color:${ink};overflow-wrap:anywhere">${link('tel:'+phone,esc(state.phone))} &nbsp; ${link('https://wa.me/'+wa,'↗ WhatsApp')}<br>${link('mailto:'+state.email,esc(state.email))}<br>${link(SITE,'advertisingandmore.com ↗')}</div>`;
-let portrait=`<img class="portrait" src="${asset('tanya.jpg',exporting)}" alt="Tanya Hyacinth" width="90" height="90" style="display:block;width:90px;height:90px;object-fit:cover;object-position:center 24%;border-radius:${editorial?'4px':'50%'};border:3px solid #d5a021;padding:3px;background:#fffdf9">`;
-let seal=n===0?`<div style="box-sizing:border-box;position:relative;margin:-14px 0 0 40px;width:54px;height:54px;border-radius:50%;background:#f4d67e;background:conic-gradient(#f4d67e,#c99618,#f4d67e,#d5a021,#f4d67e);color:#493508;text-align:center;padding:12px 3px;font:bold 8px/1.15 Arial;outline:1px solid #a47d1c;outline-offset:-4px;transform:rotate(-10deg)">100%<br>SUCCESS<br>RATE</div>`:'';
-let header=editorial?`<tr><td style="padding:9px 16px;background:#ffce1b;color:#0b1e3f;font:bold 8px Arial;letter-spacing:1px">WE WANT SOMETHING PEOPLE REMEMBER &nbsp; · &nbsp; A&M INTEGRATED AGENCY</td></tr>`:'';
-let text=`<div style="font:10px Arial;letter-spacing:1.5px;color:${editorial?'#ffce1b':'#8a6414'};margin-bottom:10px">${editorial?'IDEAS. ENERGY. & MORE.':luxury?'ADVERTISING & MORE':'YOUR NEXT GREAT IDEA STARTS HERE.'}</div><div class="sig-name" style="font:700 ${editorial?'25':'23'}px/1.12 ${luxury?"Georgia,serif":"'Plus Jakarta Sans',Arial,sans-serif"};letter-spacing:-.6px;color:${ink};overflow-wrap:anywhere">${name}</div><div style="font:bold 10px/1.5 Arial;margin:8px 0 0;color:${ink}">${title}</div><div style="font:9px/1.5 Arial;color:${muted};margin-bottom:10px">Advertising & More Sdn. Bhd. (A&M)</div>${contact}<div style="margin-top:9px">${socials(exporting,ink)}</div>`;
-let main=`<div class="sig-main" style="display:inline-block;width:100%;max-width:450px;vertical-align:middle;text-align:left"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td class="sig-main-inner" style="padding:22px 18px 14px"><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr><td class="portrait-col" width="108" valign="top" style="width:108px;padding-right:14px">${portrait}${seal}${luxury?`<img src="${asset('coffee-cup.png',exporting)}" width="48" alt="A little coffee" style="display:block;margin:8px auto 0">`:''}</td><td valign="top">${text}</td></tr></table><div class="signature-script" style="font:500 21px/1.2 Caveat,'Segoe Script',cursive;color:${editorial?'#ffce1b':'#8d6817'};margin-top:12px">${editorial?'Your every Need. Idea. Brand. Ready to ROCK!':`Warmly & caffeinated, ${short}`}</div><div style="font:9px/1.5 Arial;color:${muted};margin-top:6px">${luxury?'Five simple steps, a lot of heart, and just enough caffeine.':editorial?'Integrated advertising & marketing. All under one happy roof.':'Everything under one happy roof — plus really good coffee.'}</div></td></tr></table></div>`;
-let qrbox=link(COFFEE,qr(exporting),'display:inline-block;background:#fff;padding:2px;border-radius:4px');let stub=`<div class="sig-stub ${n===0?'ticket-notch':''}" style="position:relative;display:inline-block;vertical-align:middle;width:166px;max-width:100%;background:${luxury?'#efe6d6':editorial?'#0049a8':'#0b1e3f'};color:${luxury?'#0b1e3f':'#fff'};border-left:1px dashed #d5a021;text-align:center;padding:18px 10px"><div style="font:8px/1.6 'JetBrains Mono',monospace;letter-spacing:1px;margin-bottom:10px;color:${luxury?'#765718':'#ffdf67'}">${n===0?'ADMIT ONE · COFFEE ON US':editorial?'GOOD IDEAS BREW HERE':'AN OPEN INVITATION'}</div><div class="qr" style="margin:0 auto 9px;${editorial?'border:1px solid #ffce1b;padding:6px;display:table;transform:rotate(3deg)':''}">${qrbox}</div><div class="stub-copy"><div style="font:8px Arial;letter-spacing:1.4px;margin:8px 0 12px">SCAN FOR COFFEE</div>${link(COFFEE,`<img src="${asset('coffee-cup.png',exporting)}" width="25" height="25" alt="" style="vertical-align:middle;object-fit:contain;margin-right:3px"> CLICK FOR COFFEE →`,`display:inline-block;background:#ffce1b;color:#0b1e3f;font:bold 9px/28px Arial;padding:3px 7px;border-radius:${editorial?'24':'5'}px;white-space:nowrap`)}</div></div>`;
-let foot=editorial?(exporting?'Digital · Media Buying · PR · Experiential Events · Creative':`<button class="service" data-service="1" title="Click to spotlight another service">Digital &nbsp; · &nbsp; Media Buying &nbsp; · &nbsp; PR &nbsp; · &nbsp; Experiential &nbsp; · &nbsp; Creative ↻</button>`):'TRUSTED BY AIRASIA · AIRBNB · P&G · CELCOM · WARNER · CURTIN UNIVERSITY';
-return `<table class="sig" role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="${bg}" style="width:100%;max-width:640px;background:${bg};color:${ink};border:${luxury?'1px solid #d5a021':'0'};border-radius:${editorial?'0':'8'}px;overflow:hidden;border-collapse:separate"><tbody>${header}<tr><td style="font-size:0;text-align:center"><!--[if mso]><table role="presentation" cellpadding="0" cellspacing="0" border="0" width="616"><tr><td width="450" valign="middle"><![endif]-->${main}<!--[if mso]></td><td width="166" valign="middle"><![endif]-->${stub}<!--[if mso]></td></tr></table><![endif]--></td></tr><tr><td style="background:${editorial?'#00377f':luxury?'#efe6d6':'#f1eadc'};color:${editorial?'#fff':'#5e5a50'};padding:10px 12px;font:7px/1.6 Arial;letter-spacing:.65px;text-align:center">${foot}</td></tr></tbody></table>`}
-function render(){for(let n=0;n<3;n++)$('concept'+n).innerHTML=signature(n);$('mobile-preview').innerHTML=signature(state.selected);document.querySelectorAll('.stage').forEach(el=>{el.classList.toggle('dark',state.dark);el.classList.toggle('mobile-mode',state.view==='mobile')});$('preview-body').classList.toggle('preview-dark',state.dark);$('selection-label').textContent=`Copying: 0${state.selected+1} — ${labels[state.selected]} · Gmail / Apple Mail`;$('email-test').href='mailto:'+state.email;$('wa-test').href='https://wa.me/'+state.phone.replace(/\D/g,'');document.querySelector('.mail-by').textContent=state.name+' → You';document.querySelectorAll('[data-select]').forEach(b=>{let yes=+b.dataset.select===state.selected;b.setAttribute('aria-pressed',yes);b.textContent=yes?'✓ Selected':'Use this design'});document.querySelectorAll('[data-panel]').forEach(p=>p.classList.toggle('selected',+p.dataset.panel===state.selected));}
-function toast(s){$('toast').textContent=s;clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>$('toast').textContent='',4200)}
-function valid(){for(let key of ['title','phone','email']){let e=$(key);if(!e.value.trim()||!e.checkValidity()){e.reportValidity();e.focus();toast('Please enter a valid '+key+'.');return false}}if(state.phone.replace(/\D/g,'').length<7){toast('Please enter a complete international phone number.');return false}return true}
-function emailHTML(){return signature(state.selected,true)}
-function emailDoc(){return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A&M email signature</title></head><body style="margin:16px">'+emailHTML()+'</body></html>'}
-function showResult(title,html){$('result-title').textContent=title;$('result-body').innerHTML=html;$('result').showModal()}
-async function copy(raw=false){if(!valid())return;let html=emailHTML();try{if(raw){await navigator.clipboard.writeText(html)}else{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([state.name+'\n'+state.title+'\n'+state.email+'\n'+state.phone+'\n'+COFFEE],{type:'text/plain'})})])}toast(raw?'Email HTML copied.':'Signature copied. Paste into your email signature settings.')}catch(e){showResult('Copy manually',raw?'<p>Clipboard access is unavailable. Select and copy the HTML below.</p><textarea readonly aria-label="Email HTML">'+esc(html)+'</textarea>':'<p>Clipboard access is unavailable. Select the signature below, then press Ctrl/Cmd+C.</p><div id="manual-signature">'+html+'</div>');let target=raw?$('result-body').querySelector('textarea'):$('manual-signature');if(raw){target.focus();target.select()}else{let range=document.createRange();range.selectNodeContents(target);let sel=getSelection();sel.removeAllRanges();sel.addRange(range)}}}
-['title','phone','email'].forEach(k=>{$(k).required=true;$(k).addEventListener('input',e=>{state[k]=e.target.value;render()})});
-$('names').addEventListener('click',e=>{let b=e.target.closest('[data-name]');if(!b)return;state.name=b.dataset.name;document.querySelectorAll('[data-name]').forEach(x=>x.setAttribute('aria-pressed',x===b));render()});
-for(let group of ['view','theme'])$(group).addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;document.querySelectorAll('#'+group+' button').forEach(x=>x.setAttribute('aria-pressed',x===b));if(group==='view')state.view=b.dataset.view;else state.dark=b.dataset.dark==='true';render()});
-document.addEventListener('click',e=>{let b=e.target.closest('[data-select],[data-copy],.social-setup,[data-service]');if(!b)return;if(b.matches('.social-setup')){$('settings').showModal();$('settings').querySelector('details').open=true;return}if(b.hasAttribute('data-service')){let services=['Digital','Media Buying','PR','Experiential Events','Creative'];state.service=((state.service||0)+1)%5;b.textContent=services[state.service]+' · Your next big idea starts here ↻';return}state.selected=+(b.dataset.select??b.dataset.copy);render();if(b.hasAttribute('data-copy'))copy()});
-$('copy-rich').onclick=()=>copy();$('copy-raw').onclick=()=>copy(true);$('mobile-copy').onclick=()=>copy();$('setup').onclick=()=>$('settings').showModal();$('close-settings').onclick=()=>{for(let k of ['linkedin','instagram','facebook']){let val=$(k).value.trim();if(val&&!/^https:\/\//i.test(val)){toast('Use a full https:// social profile URL.');$(k).focus();return}state[k]=val}state.asset=$('asset-mode').value;render();$('settings').close()};$('close-result').onclick=()=>$('result').close();
-$('standalone').onclick=e=>{e.preventDefault();if(!valid())return;let blob=new Blob([emailDoc()],{type:'text/html'}),url=URL.createObjectURL(blob);let w=window.open(url,'_blank');if(!w){showResult('Your email-ready file',`<p><a href="${url}" target="_blank">Open your customized signature ↗</a></p>`)}setTimeout(()=>URL.revokeObjectURL(url),60000)};
-$('verify').onclick=()=>{let doc=new DOMParser().parseFromString(emailHTML(),'text/html'),links=[...doc.querySelectorAll('a')];let bad=links.filter(a=>! /^(https:\/\/|mailto:|tel:)/.test(a.getAttribute('href')));let width=$('mobile-preview').scrollWidth;showResult('Signature checks',`<p>✓ ${links.length} links use HTTPS, email or phone destinations.<br>${bad.length?'✕ Invalid links found':'✓ No empty or placeholder links in the export.'}<br>${width<=375?'✓':'✕'} Mobile signature width: ${width}px / 375px.<br>✓ QR payload: <a href="${COFFEE}" target="_blank" rel="noopener">${COFFEE}</a></p><p>These checks verify structure and destinations, not remote server availability. Scan the code with your phone to verify it on your device.</p>`)};
-render();
-</script></body></html>
+  const nameBtns = document.querySelectorAll('[data-name]');
+  const phoneInput = document.getElementById('phone-input');
+  const emailInput = document.getElementById('email-input');
+  const mailWin = document.getElementById('desktop-mail-window');
+  const btnLight = document.getElementById('btn-light');
+  const btnDark = document.getElementById('btn-dark');
+  const toast = document.getElementById('toast');
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.style.display = 'block';
+    clearTimeout(window.__toastTimer);
+    window.__toastTimer = setTimeout(() => { toast.style.display = 'none'; }, 3200);
+  }
+
+  function syncFields(customName) {
+    if (customName) {
+      document.querySelectorAll('.js-name').forEach(el => { el.textContent = customName; });
+    }
+    const ph = phoneInput.value.trim();
+    const digits = ph.replace(/[^+\d]/g, '');
+    const waDigits = ph.replace(/\D/g, '');
+    document.querySelectorAll('.js-phone').forEach(el => { el.textContent = ph; });
+    document.querySelectorAll('.js-phone-href').forEach(el => { el.href = 'tel:' + digits; });
+    document.querySelectorAll('.js-wa-href').forEach(el => { el.href = 'https://wa.me/' + waDigits; });
+
+    const em = emailInput.value.trim();
+    document.querySelectorAll('.js-email').forEach(el => { el.textContent = em; });
+    document.querySelectorAll('.js-email-href').forEach(el => { el.href = 'mailto:' + em; });
+  }
+
+  nameBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      nameBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      syncFields(btn.getAttribute('data-name'));
+    });
+  });
+
+  phoneInput.addEventListener('input', () => syncFields());
+  emailInput.addEventListener('input', () => syncFields());
+
+  btnLight.addEventListener('click', () => {
+    btnLight.classList.add('active');
+    btnDark.classList.remove('active');
+    mailWin.classList.remove('dark-client');
+  });
+
+  btnDark.addEventListener('click', () => {
+    btnDark.classList.add('active');
+    btnLight.classList.remove('active');
+    mailWin.classList.add('dark-client');
+  });
+
+  async function copySignatureBlock(containerId, label) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    const absBase = 'https://frank20190926.github.io/am-email-signature/assets/';
+    const html = el.innerHTML.replace(/\.\/assets\//g, absBase);
+    try {
+      if (navigator.clipboard && window.ClipboardItem) {
+        const blobHtml = new Blob([html], { type: 'text/html' });
+        const blobText = new Blob([el.innerText], { type: 'text/plain' });
+        await navigator.clipboard.write([new ClipboardItem({ 'text/html': blobHtml, 'text/plain': blobText })]);
+        showToast(label + ' copied with hosted image URLs! Press Cmd+V / Ctrl+V in Gmail or Outlook.');
+        return;
+      }
+    } catch (e) {}
+    const range = document.createRange();
+    range.selectNodeContents(el);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    sel.removeAllRanges();
+    showToast(label + ' copied to clipboard!');
+  }
+
+  document.getElementById('copy-ed1').addEventListener('click', () => copySignatureBlock('sig-edition-a', 'Primary Espresso Desk Signature'));
+  document.getElementById('copy-ed2').addEventListener('click', () => copySignatureBlock('sig-edition-b', 'Horizontal Agency Signature'));
+</script>
+</body>
+</html>
