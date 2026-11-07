@@ -3,23 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Advertising &amp; More (A&amp;M) | Tanya Hyacinth Email Signature Suite</title>
+<title>Advertising &amp; More (A&amp;M) · Executive Email Signature</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --am-navy: #0B1E3F;
-    --am-navy-mid: #162B54;
-    --am-blue: #0049A8;
-    --am-blue-bright: #1671C9;
-    --am-yellow: #FFCE1B;
-    --am-gold: #D5A021;
-    --am-cream: #FFFDF9;
-    --am-sand: #F4EFE6;
-    --am-border: #E2E8F0;
-    --am-text: #0F172A;
-    --am-muted: #475569;
+    --navy-deep: #0B1B36;
+    --navy-card: #0F2347;
+    --royal-blue: #0049A8;
+    --gold-bright: #FFCE1B;
+    --gold-warm: #E5A91A;
+    --cream-bg: #FAF5EA;
+    --cream-soft: #F3EBDD;
+    --cream-border: #E6Dbc8;
+    --coral-accent: #E86B32;
   }
 
   * {
@@ -29,884 +27,996 @@
   }
 
   body {
-    background-color: #EEF2F6;
-    color: var(--am-text);
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: radial-gradient(circle at 18% 15%, #173263 0%, #0B1B36 58%, #071226 100%);
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
-    padding: 20px 24px 28px;
+    min-height: 100vh;
+    padding: 34px 42px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .workspace {
-    max-width: 1380px;
+  .canvas {
+    width: 100%;
+    max-width: 1356px;
     margin: 0 auto;
   }
 
-  /* Single-Line Commercial Top Utility Bar */
-  .topbar {
+  /* Editorial Header: Clean, Spacious, Zero Clutter */
+  .hero-bar {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    background: var(--am-navy);
-    color: #FFFFFF;
-    padding: 12px 20px;
-    border-radius: 14px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 26px rgba(11, 30, 63, 0.14);
-    gap: 12px;
-    white-space: nowrap;
+    margin-bottom: 26px;
+    gap: 24px;
   }
 
-  .brand-lockup {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    flex-shrink: 0;
-  }
-
-  .brand-lockup img {
-    width: 34px;
-    height: 34px;
-    object-fit: contain;
-  }
-
-  .brand-lockup .brand-title {
-    font-size: 15px;
+  .eyebrow {
+    font-size: 11.5px;
     font-weight: 800;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 8px;
+  }
+
+  .hero-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.08;
     color: #FFFFFF;
+    letter-spacing: -0.02em;
   }
 
-  .brand-lockup .brand-sub {
-    font-size: 11px;
-    color: #94A3B8;
-    font-weight: 500;
+  .hero-title em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--gold-bright);
   }
 
-  .toolbar-controls {
+  .header-actions {
     display: flex;
     align-items: center;
-    gap: 8px;
-    flex-wrap: nowrap;
+    gap: 12px;
+    padding-bottom: 4px;
   }
 
-  .control-pill {
+  .name-switcher {
     display: inline-flex;
-    align-items: center;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 8px;
-    padding: 3px;
-    gap: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 99px;
+    padding: 4px;
+    gap: 4px;
   }
 
-  .control-pill button {
+  .name-switcher button {
     background: transparent;
     border: none;
     color: #CBD5E1;
     font-family: inherit;
-    font-size: 11.5px;
+    font-size: 12px;
     font-weight: 600;
-    padding: 5px 9px;
-    border-radius: 6px;
+    padding: 6px 13px;
+    border-radius: 99px;
     cursor: pointer;
-    transition: background 0.15s, color 0.15s;
-    white-space: nowrap;
+    transition: all 0.15s ease;
   }
 
-  .control-pill button.active {
-    background: var(--am-yellow);
-    color: var(--am-navy);
+  .name-switcher button.active {
+    background: #FFFFFF;
+    color: var(--navy-deep);
     font-weight: 700;
   }
 
-  .inline-input {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 8px;
-    padding: 5px 9px;
-    gap: 6px;
-  }
-
-  .inline-input label {
-    font-size: 10.5px;
-    color: #94A3B8;
-    font-weight: 600;
-  }
-
-  .inline-input input {
-    background: transparent;
+  .btn-copy-main {
+    background: var(--gold-bright);
+    color: var(--navy-deep);
     border: none;
-    color: #FFFFFF;
+    border-radius: 99px;
+    padding: 10px 20px;
     font-family: inherit;
-    font-size: 11px;
-    font-weight: 600;
-    width: 98px;
-    outline: none;
-  }
-
-  .btn-copy-primary {
-    background: var(--am-yellow);
-    color: var(--am-navy);
-    border: none;
-    border-radius: 8px;
-    padding: 8px 13px;
-    font-family: inherit;
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 800;
     cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 206, 27, 0.28);
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    box-shadow: 0 4px 12px rgba(255, 206, 27, 0.25);
-    white-space: nowrap;
-  }
-
-  .btn-html-link {
-    color: #E2E8F0;
-    text-decoration: none;
-    font-size: 11.5px;
-    font-weight: 600;
-    padding: 7px 11px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    background: rgba(255, 255, 255, 0.05);
-    white-space: nowrap;
-  }
-
-  /* Main Stage Grid: Balanced Left Desktop Mail + Right Mobile & Spec Stack */
-  .main-stage {
-    display: grid;
-    grid-template-columns: 1fr 390px;
-    gap: 22px;
-    align-items: stretch;
-  }
-
-  .mail-window {
-    background: #FFFFFF;
-    border-radius: 16px;
-    border: 1px solid #CBD5E1;
-    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .mail-window.dark-client {
-    background: #111827;
-    border-color: #1F2937;
-    color: #F8FAFC;
-  }
-
-  .mail-titlebar {
-    background: #F8FAFC;
-    border-bottom: 1px solid #E2E8F0;
-    padding: 11px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .mail-window.dark-client .mail-titlebar {
-    background: #1E293B;
-    border-bottom-color: #334155;
-  }
-
-  .window-dots {
-    display: flex;
     gap: 7px;
   }
 
-  .window-dots span {
+  /* Two-Column Stage: 1 Spacious Desktop Preview + 1 Clean Mobile Preview */
+  .stage-grid {
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  /* Desktop Email Window */
+  .desktop-window {
+    background: #FFFFFF;
+    border-radius: 18px;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.38);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .win-chrome {
+    background: #F4F6F9;
+    border-bottom: 1px solid #E5E9F0;
+    padding: 13px 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .win-dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  .win-dots span {
     width: 11px;
     height: 11px;
     border-radius: 50%;
   }
 
-  .dot-r { background: #EF4444; }
-  .dot-y { background: #F59E0B; }
-  .dot-g { background: #10B981; }
+  .win-dots .r { background: #FF5F56; }
+  .win-dots .y { background: #FFBD2E; }
+  .win-dots .g { background: #27C93F; }
 
-  .mail-meta-title {
-    font-size: 12px;
+  .win-title {
+    font-size: 12.5px;
     font-weight: 600;
-    color: #64748B;
+    color: #8492A6;
   }
 
-  .mail-window.dark-client .mail-meta-title {
-    color: #94A3B8;
-  }
-
-  .mail-header-bar {
-    padding: 14px 26px 12px;
-    border-bottom: 1px solid #F1F5F9;
-    font-size: 13px;
-  }
-
-  .mail-window.dark-client .mail-header-bar {
-    border-bottom-color: #1E293B;
-  }
-
-  .mail-subject {
-    font-size: 16.5px;
-    font-weight: 800;
-    color: var(--am-navy);
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .mail-window.dark-client .mail-subject {
-    color: #F8FAFC;
-  }
-
-  .mail-participants {
-    color: #64748B;
-    font-size: 12px;
-  }
-
-  .mail-body-compose {
-    padding: 16px 26px 22px;
+  .win-body {
+    padding: 26px 34px 32px;
     flex: 1;
-  }
-
-  .email-prose {
-    font-size: 13.5px;
-    line-height: 1.55;
-    color: #334155;
-    margin-bottom: 14px;
-  }
-
-  .mail-window.dark-client .email-prose {
-    color: #CBD5E1;
-  }
-
-  .section-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 0 10px;
-  }
-
-  .section-bar h2 {
-    font-size: 13.5px;
-    font-weight: 800;
-    color: var(--am-navy);
-    letter-spacing: -0.01em;
-  }
-
-  .mail-window.dark-client .section-bar h2 {
-    color: #F8FAFC;
-  }
-
-  .section-bar .btn-mini-copy {
-    background: #F1F5F9;
-    color: var(--am-navy);
-    border: 1px solid #CBD5E1;
-    border-radius: 6px;
-    padding: 5px 11px;
-    font-size: 11.5px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-
-  .divider-rule {
-    height: 1px;
-    background: #E2E8F0;
-    margin: 18px 0 14px;
-  }
-
-  .mail-window.dark-client .divider-rule {
-    background: #1E293B;
-  }
-
-  /* Right Column Stack: Phone + Quick Compatibility Spec Card */
-  .right-col-stack {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
   }
 
-  .phone-shell {
-    background: #0B1E3F;
-    border-radius: 34px;
-    padding: 11px;
-    box-shadow: 0 18px 40px rgba(11, 30, 63, 0.20);
-    border: 3px solid #1E3A6D;
-  }
-
-  .phone-screen {
-    background: #FFFFFF;
-    border-radius: 24px;
-    overflow: hidden;
-  }
-
-  .phone-statusbar {
-    background: #F8FAFC;
-    padding: 9px 18px 7px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 11.5px;
-    font-weight: 700;
-    color: #0F172A;
-    border-bottom: 1px solid #E2E8F0;
-  }
-
-  .phone-notch {
-    width: 72px;
-    height: 16px;
-    background: #0F172A;
-    border-radius: 99px;
-  }
-
-  .phone-mail-head {
-    padding: 10px 15px;
+  .mail-meta {
+    margin-bottom: 18px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #F1F5F9;
   }
 
-  .phone-mail-head .subj {
+  .mail-from {
     font-size: 13.5px;
-    font-weight: 800;
-    color: var(--am-navy);
+    color: #64748B;
+    margin-bottom: 4px;
   }
 
-  .phone-mail-head .from {
-    font-size: 11px;
-    color: #64748B;
+  .mail-from strong {
+    color: #0F172A;
+    font-weight: 700;
+    margin-right: 6px;
+  }
+
+  .mail-subj {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0B1B36;
+    margin-top: 8px;
+  }
+
+  .mail-Intro {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: #334155;
+    margin-bottom: 24px;
+    max-width: 680px;
+  }
+
+  /* =====================================================================
+     SIGNATURE CARD: SPACIOUS, ICONIC TOP-DOWN COFFEE CUP + TICKET STUB
+     ===================================================================== */
+  .sig-card-outer {
+    background: var(--cream-bg);
+    border: 1.5px solid var(--cream-border);
+    border-radius: 20px;
+    padding: 24px 24px 24px 28px;
+    box-shadow: 0 12px 30px rgba(11, 27, 54, 0.05);
+  }
+
+  .sig-main-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Top-Down Coffee Cup Frame Around Portrait */
+  .cup-avatar-wrap {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    margin: 0 auto;
+  }
+
+  /* Steam wisps above the cup */
+  .steam-group {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 11px;
+  }
+
+  .steam-group span {
+    width: 3px;
+    height: 13px;
+    border-radius: 99px;
+    background: var(--gold-warm);
+    opacity: 0.65;
+    transform: rotate(12deg);
+  }
+
+  .steam-group span:nth-child(2) {
+    height: 16px;
+    margin-top: -3px;
+    opacity: 0.9;
+  }
+
+  /* Coffee mug handle on the right */
+  .cup-handle {
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 46px;
+    border: 7px solid var(--navy-deep);
+    border-left: none;
+    border-radius: 0 18px 18px 0;
+    background: transparent;
+    box-shadow: 3px 4px 10px rgba(11, 27, 54, 0.12);
+  }
+
+  /* White ceramic saucer & rim */
+  .cup-saucer {
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    padding: 11px;
+    box-shadow: 0 12px 28px rgba(11, 27, 54, 0.14), inset 0 0 0 1px #EAE0CE;
+    position: relative;
+  }
+
+  .cup-inner-rim {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--navy-deep);
+    padding: 5px;
+    border: 2.5px solid var(--gold-bright);
+    overflow: hidden;
+  }
+
+  .cup-inner-rim img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Gold 100% Success Seal */
+  .success-seal {
+    position: absolute;
+    bottom: 2px;
+    left: -4px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #FFE055 0%, #E0A112 85%);
+    border: 3px solid #FFFDF9;
+    box-shadow: 0 6px 14px rgba(11, 27, 54, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy-deep);
+    transform: rotate(-10deg);
+  }
+
+  .success-seal strong {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .success-seal span {
+    font-size: 6.5px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
     margin-top: 2px;
   }
 
-  .phone-mail-body {
-    padding: 10px 13px 14px;
-    font-size: 12px;
-    line-height: 1.45;
-    color: #334155;
+  /* Center Bio Column */
+  .bio-col {
+    padding: 0 28px 0 26px;
   }
 
-  .spec-card {
-    background: #FFFFFF;
-    border: 1px solid #CBD5E1;
-    border-radius: 16px;
-    padding: 16px 18px;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  .script-greeting {
+    font-family: 'Caveat', cursive;
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--coral-accent);
+    line-height: 1;
+    margin-bottom: 6px;
   }
 
-  .spec-card h3 {
-    font-size: 13px;
+  .exec-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 31px;
+    font-weight: 700;
+    color: var(--navy-deep);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+  }
+
+  .exec-role {
+    font-size: 11.5px;
     font-weight: 800;
-    color: var(--am-navy);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9A6B13;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .bean-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .bean-divider .line-gold {
+    width: 34px;
+    height: 2.5px;
+    background: var(--gold-warm);
+    border-radius: 2px;
+  }
+
+  .bean-divider .bean-dot {
+    width: 9px;
+    height: 7px;
+    background: #784B12;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+  }
+
+  .bean-divider .line-soft {
+    flex: 1;
+    height: 1px;
+    background: #E5DEC9;
+  }
+
+  .contact-grid {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .contact-grid td {
+    padding: 5px 14px 5px 0;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1E293B;
+    white-space: nowrap;
+  }
+
+  .contact-link {
+    color: #1E293B;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .icon-box {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    background: var(--navy-deep);
+    color: var(--gold-bright);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .social-Cluster {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .soc-pill {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    border: 1.5px solid var(--navy-deep);
+    color: var(--navy-deep);
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Right Perforated Coffee Ticket Stub */
+  .coffee-ticket {
+    width: 214px;
+    background: var(--navy-deep);
+    border-radius: 16px;
+    padding: 16px 15px 14px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 12px 26px rgba(11, 27, 54, 0.18);
+  }
+
+  .ticket-header {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
     margin-bottom: 10px;
+  }
+
+  .ticket-qr-box {
+    background: #FFFFFF;
+    padding: 9px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+
+  .ticket-qr-box img {
+    width: 118px;
+    height: 118px;
+    display: block;
+  }
+
+  /* Ticket Side Notches & Perforation */
+  .ticket-perf {
+    position: relative;
+    margin: 13px -16px 11px;
+    border-top: 1.5px dashed rgba(255, 206, 27, 0.35);
+    height: 1px;
+  }
+
+  .ticket-perf::before,
+  .ticket-perf::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--cream-bg);
+  }
+
+  .ticket-perf::before { left: -8px; }
+  .ticket-perf::after { right: -8px; }
+
+  .ticket-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    white-space: nowrap;
+    background: var(--gold-bright);
+    color: var(--navy-deep);
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    border-radius: 99px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(255, 206, 27, 0.3);
+  }
+
+  /* Bottom Agency Pill Banner */
+  .agency-pill-bar {
+    margin-top: 12px;
+    background: var(--navy-deep);
+    border-radius: 14px;
+    padding: 10px 14px 10px 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: #FFFFFF;
   }
 
-  .spec-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 12px;
+  .agency-pill-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
-  .spec-item {
-    background: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    border-radius: 8px;
-    padding: 7px 10px;
-    font-size: 11px;
-    font-weight: 600;
-    color: #334155;
+  .agency-pill-left img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
   }
 
-  .spec-item strong {
-    display: block;
-    color: var(--am-blue);
-    font-size: 11.5px;
-    margin-bottom: 1px;
+  .agency-brand-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: #FFFFFF;
   }
 
-  .color-swatches {
+  .agency-brand-name span {
+    color: var(--gold-bright);
+    font-style: italic;
+  }
+
+  .agency-roof-tag {
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #CBD5E1;
+    padding-left: 12px;
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .agency-roof-tag strong {
+    color: var(--gold-bright);
+  }
+
+  .agency-pill-cta {
+    background: linear-gradient(135deg, #F07B3F 0%, #D95326 100%);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  /* =====================================================================
+     RIGHT COLUMN: CLEAN MOBILE VIEW WITH SKELETON EMAIL LINES
+     ===================================================================== */
+  .mobile-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mobile-label {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding-top: 10px;
-    border-top: 1px solid #F1F5F9;
-    font-size: 11px;
-    font-weight: 700;
-    color: #475569;
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #CBD5E1;
+    margin-bottom: 12px;
   }
 
-  .swatch-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: #F8FAFC;
-    border: 1px solid #E2E8F0;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 10.5px;
-  }
-
-  .swatch-dot {
-    width: 10px;
-    height: 10px;
+  .mobile-label::before {
+    content: '';
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    background: var(--gold-bright);
   }
 
-  .toast-banner {
-    position: fixed;
-    bottom: 20px;
-    right: 24px;
-    background: var(--am-navy);
-    color: #FFFFFF;
-    border-left: 4px solid var(--am-yellow);
-    padding: 12px 18px;
-    border-radius: 10px;
-    font-size: 13px;
+  .iphone-frame {
+    background: #071124;
+    border-radius: 42px;
+    padding: 12px;
+    border: 3px solid #233863;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+    flex: 1;
+    display: flex;
+  }
+
+  .iphone-screen {
+    background: #FFFFFF;
+    border-radius: 31px;
+    padding: 14px 16px 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .iphone-notch {
+    width: 92px;
+    height: 20px;
+    background: #0B1B36;
+    border-radius: 99px;
+    margin: 0 auto 14px;
+  }
+
+  /* Clean Skeleton Lines Instead of Noisy Email Text */
+  .skeleton-lines {
+    margin-bottom: 16px;
+    padding: 6px 4px 14px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .sk-line {
+    height: 8px;
+    background: #E2E8F0;
+    border-radius: 99px;
+    margin-bottom: 9px;
+  }
+
+  .sk-line.w1 { width: 88%; background: #CBD5E1; height: 10px; margin-bottom: 11px; }
+  .sk-line.w2 { width: 76%; }
+  .sk-line.w3 { width: 54%; margin-bottom: 0; }
+
+  /* Mobile Stacked Card */
+  .mob-sig-card {
+    background: var(--cream-bg);
+    border: 1.5px solid var(--cream-border);
+    border-radius: 20px;
+    padding: 20px 16px 18px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mob-avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    background: var(--navy-deep);
+    padding: 4px;
+    border: 2.5px solid var(--gold-bright);
+    box-shadow: 0 8px 20px rgba(11, 27, 54, 0.16);
+  }
+
+  .mob-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .mob-greeting {
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
     font-weight: 700;
-    box-shadow: 0 12px 28px rgba(11, 30, 63, 0.28);
+    color: var(--coral-accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .mob-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 19.5px;
+    font-weight: 700;
+    color: var(--navy-deep);
+    line-height: 1.15;
+  }
+
+  .mob-role {
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #9A6B13;
+    margin-top: 5px;
+    margin-bottom: 14px;
+  }
+
+  .mob-quick-btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .mob-qbtn {
+    background: var(--navy-deep);
+    color: var(--gold-bright);
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  .mob-coffee-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: var(--gold-bright);
+    color: var(--navy-deep);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 11px;
+    border-radius: 99px;
+    text-decoration: none;
+    margin-bottom: 8px;
+    box-shadow: 0 6px 14px rgba(255, 206, 27, 0.28);
+  }
+
+  .mob-roof-pill {
+    background: var(--navy-deep);
+    color: #FFFFFF;
+    font-size: 9.5px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px;
+    border-radius: 99px;
+  }
+
+  .mob-roof-pill span {
+    color: var(--gold-bright);
+  }
+
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    right: 28px;
+    background: var(--gold-bright);
+    color: var(--navy-deep);
+    padding: 12px 20px;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     display: none;
-    z-index: 99;
   }
 </style>
 </head>
 <body>
 
-<div class="workspace">
-  <!-- Single-Line Commercial Top Utility Bar -->
-  <header class="topbar">
-    <div class="brand-lockup">
-      <img src="./assets/coffee-cup.png" alt="Advertising & More Coffee Cup">
-      <div>
-        <div class="brand-title">Advertising &amp; More Sdn. Bhd. (A&amp;M)</div>
-        <div class="brand-sub">Executive Email Signature Suite · Tanya Hyacinth D’Silva-Fernandez</div>
-      </div>
+<div class="canvas">
+  <!-- Minimalist Editorial Header -->
+  <header class="hero-bar">
+    <div>
+      <div class="eyebrow">Advertising &amp; More · Executive Email Signature</div>
+      <h1 class="hero-title">Good ideas start <em>over coffee.</em></h1>
     </div>
 
-    <div class="toolbar-controls">
-      <div class="control-pill" role="group" aria-label="Name format">
-        <button type="button" class="active" data-name="Tanya Hyacinth D’Silva-Fernandez">Full Name</button>
-        <button type="button" data-name="Tanya Hyacinth">Tanya Hyacinth</button>
-        <button type="button" data-name="Tania Hyacinth">Tania</button>
+    <div class="header-actions">
+      <div class="name-switcher" role="group" aria-label="Switch signature name">
+        <button type="button" class="active" data-first="Tanya Hyacinth" data-last="D’Silva-Fernandez">Full Name</button>
+        <button type="button" data-first="Tanya" data-last="Hyacinth">Tanya Hyacinth</button>
+        <button type="button" data-first="Tania" data-last="Hyacinth">Tania Hyacinth</button>
       </div>
-
-      <div class="inline-input">
-        <label for="phone-input">Tel</label>
-        <input id="phone-input" type="text" value="+60 12-345 6789">
-      </div>
-
-      <div class="inline-input">
-        <label for="email-input">Mail</label>
-        <input id="email-input" type="text" value="hello@advertisingandmore.com" style="width:148px;">
-      </div>
-
-      <div class="control-pill" role="group" aria-label="Inbox theme">
-        <button type="button" class="active" id="btn-light">Light</button>
-        <button type="button" id="btn-dark">Dark</button>
-      </div>
-
-      <button type="button" class="btn-copy-primary" id="copy-ed1">
-        <span>Copy Signature</span>
+      <button type="button" class="btn-copy-main" id="copy-btn">
+        <span>☕ Copy Signature</span>
       </button>
-      <a class="btn-html-link" href="./tanya-signature-email-ready.html">HTML Code ↗</a>
     </div>
   </header>
 
-  <div class="main-stage">
-    <!-- Left Column: Desktop Email Client Displaying Both Signature Editions at Full Proportional Width -->
-    <div class="mail-window" id="desktop-mail-window">
-      <div>
-        <div class="mail-titlebar">
-          <div class="window-dots">
-            <span class="dot-r"></span>
-            <span class="dot-y"></span>
-            <span class="dot-g"></span>
-          </div>
-          <div class="mail-meta-title">Desktop Email Client Preview (Gmail / Outlook / Apple Mail HTML Table)</div>
-          <div style="font-size:11.5px;font-weight:700;color:#0049A8;">Interactive Links &amp; Scannable QR</div>
+  <!-- Main Stage: 1 Spacious Desktop Preview + 1 Clean Mobile Preview -->
+  <div class="stage-grid">
+    <!-- Left Column: Desktop Email Window -->
+    <div class="desktop-window">
+      <div class="win-chrome">
+        <div class="win-dots">
+          <span class="r"></span>
+          <span class="y"></span>
+          <span class="g"></span>
         </div>
-
-        <div class="mail-header-bar">
-          <div class="mail-subject">
-            <span>Re: Q4 Integrated Brand Campaign &amp; Media Buying Proposal</span>
-            <span style="font-size:11.5px;font-weight:600;color:#64748B;">Today, 10:42 AM</span>
-          </div>
-          <div class="mail-participants">
-            <strong>From:</strong> <span class="js-name">Tanya Hyacinth D’Silva-Fernandez</span> &lt;<span class="js-email">hello@advertisingandmore.com</span>&gt; &nbsp;|&nbsp; <strong>To:</strong> Brand Marketing Director
-          </div>
-        </div>
-
-        <div class="mail-body-compose">
-          <p class="email-prose">
-            Hi Sarah,<br>
-            It was a pleasure speaking with your team earlier. I have attached our integrated media, creative, and experiential roadmap tailored for your upcoming launch. Take a look when you have a moment, and click the coffee cup below whenever you are ready to chat over a fresh cup!
-          </p>
-
-          <!-- =================================================================
-               EDITION A: THE ESPRESSO DESK (3-Column Table + Campaign Ribbon)
-               ================================================================= -->
-          <div id="sig-edition-a">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:880px;border-collapse:separate;border-spacing:0;background:#FFFDF9;border:1.5px solid #E5DEC9;border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(11,30,63,0.08);font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;">
-              <tr>
-                <td colspan="3" height="5" style="height:5px;background:linear-gradient(90deg,#0B1E3F 0%,#0049A8 62%,#FFCE1B 62%,#D5A021 100%);font-size:0;line-height:0;">&nbsp;</td>
-              </tr>
-              <tr>
-                <!-- Column 1: Portrait + 100% Success Rate Seal + Handwritten Sign-off -->
-                <td width="175" valign="middle" align="center" style="width:175px;padding:18px 14px 14px 18px;background:#FBF7EE;border-right:1px solid #EBE3D0;">
-                  <div style="position:relative;width:112px;height:112px;margin:0 auto 8px;">
-                    <img src="./assets/tanya-avatar-cream.png" width="112" height="112" alt="Tanya Hyacinth" style="display:block;width:112px;height:112px;border-radius:50%;">
-                    <div style="position:absolute;bottom:-4px;right:-6px;background:linear-gradient(135deg,#FFCE1B,#C99618);color:#0B1E3F;border:2px solid #FFFDF9;border-radius:99px;padding:2px 8px;font-size:9px;font-weight:800;letter-spacing:0.02em;box-shadow:0 3px 8px rgba(11,30,63,0.22);white-space:nowrap;">
-                      ★ 100% SUCCESS
-                    </div>
-                  </div>
-                  <div style="font-family:'Caveat',cursive;font-size:23px;font-weight:700;color:#0049A8;line-height:1.05;margin-top:6px;">
-                    Warmly, Tanya
-                  </div>
-                  <div style="font-size:9.5px;font-weight:700;color:#85681A;letter-spacing:0.06em;text-transform:uppercase;margin-top:2px;">
-                    Coffee Enthusiast
-                  </div>
-                </td>
-
-                <!-- Column 2: Executive Details + Clickable Contact Grid -->
-                <td valign="middle" style="padding:16px 22px 14px 22px;background:#FFFDF9;">
-                  <div style="display:flex;align-items:center;gap:7px;margin-bottom:5px;">
-                    <img src="./assets/logo-mark.png" width="17" height="17" alt="A&M" style="display:inline-block;width:17px;height:17px;vertical-align:middle;">
-                    <span style="font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#0049A8;">Advertising &amp; More Sdn. Bhd.</span>
-                  </div>
-
-                  <div class="js-name" style="font-size:21px;font-weight:800;color:#0B1E3F;letter-spacing:-0.02em;line-height:1.18;">
-                    Tanya Hyacinth D’Silva-Fernandez
-                  </div>
-                  <div style="margin-top:5px;margin-bottom:12px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-                    <span style="display:inline-block;background:#0B1E3F;color:#FFCE1B;font-size:10px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;padding:3.5px 9px;border-radius:5px;">Chief Executive Officer (CEO)</span>
-                    <span style="font-size:11.5px;font-weight:700;color:#475569;">Integrated Advertising &amp; Marketing Agency</span>
-                  </div>
-
-                  <!-- 2-Column Contact Matrix -->
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="font-size:12.5px;line-height:1.5;color:#1E293B;margin-bottom:10px;">
-                    <tr>
-                      <td style="padding-bottom:6px;padding-right:12px;">
-                        <a class="js-phone-href" href="tel:+60123456789" style="color:#0B1E3F;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:7px;">
-                          <span style="display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;background:#EBF2FC;color:#0049A8;font-size:11px;font-weight:800;">✆</span>
-                          <span class="js-phone">+60 12-345 6789</span>
-                        </a>
-                        &nbsp;
-                        <a class="js-wa-href" href="https://wa.me/60123456789" target="_blank" style="display:inline-block;background:#DCFCE7;color:#166534;font-size:10px;font-weight:800;padding:2px 6px;border-radius:4px;text-decoration:none;">WhatsApp ↗</a>
-                      </td>
-                      <td style="padding-bottom:6px;">
-                        <a href="https://advertisingandmore.com" target="_blank" style="color:#0049A8;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:7px;">
-                          <span style="display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;background:#FFF4CC;color:#B47B00;font-size:11px;font-weight:800;">🌐</span>
-                          <span>www.advertisingandmore.com</span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="padding-bottom:2px;">
-                        <a class="js-email-href" href="mailto:hello@advertisingandmore.com" style="color:#0B1E3F;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:7px;">
-                          <span style="display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;background:#EBF2FC;color:#0049A8;font-size:11px;font-weight:800;">✉</span>
-                          <span class="js-email">hello@advertisingandmore.com</span>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-
-                  <!-- Social Icons + Tagline -->
-                  <div style="display:flex;align-items:center;justify-content:space-between;padding-top:8px;border-top:1px dashed #E2D9C5;">
-                    <div style="display:flex;align-items:center;gap:6px;">
-                      <a href="https://advertisingandmore.com" target="_blank" title="LinkedIn" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#0B1E3F;color:#FFFFFF;font-size:10.5px;font-weight:800;text-decoration:none;">in</a>
-                      <a href="https://advertisingandmore.com" target="_blank" title="Instagram" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#0B1E3F;color:#FFFFFF;font-size:10.5px;font-weight:800;text-decoration:none;">ig</a>
-                      <a href="https://advertisingandmore.com" target="_blank" title="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:23px;height:23px;border-radius:50%;background:#0B1E3F;color:#FFFFFF;font-size:10.5px;font-weight:800;text-decoration:none;">f</a>
-                      <span style="font-size:11px;font-weight:700;color:#64748B;margin-left:4px;">"Five simple steps, a lot of heart, and just enough caffeine."</span>
-                    </div>
-                  </div>
-                </td>
-
-                <!-- Column 3: Integrated "Click For Coffee" Coaster & Scannable QR -->
-                <td width="196" valign="middle" align="center" style="width:196px;padding:14px 16px;background:#0B1E3F;color:#FFFFFF;border-left:2px dashed #FFCE1B;">
-                  <div style="font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#FFCE1B;margin-bottom:6px;">
-                    ☕ COFFEE IS ON US
-                  </div>
-                  <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-block;background:#FFFFFF;padding:5px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.28);text-decoration:none;">
-                    <img src="./assets/qr-coffee-navy.png" width="96" height="96" alt="Scan for Coffee" style="display:block;width:96px;height:96px;border-radius:6px;">
-                  </a>
-                  <div style="font-size:9.5px;color:#CBD5E1;margin-top:5px;margin-bottom:8px;">
-                    Scan or click to book a chat
-                  </div>
-                  <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#FFCE1B;color:#0B1E3F;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.02em;padding:7px 12px;border-radius:99px;text-decoration:none;box-shadow:0 4px 12px rgba(255,206,27,0.35);white-space:nowrap;">
-                    <img src="./assets/coffee-cup.png" width="18" height="18" alt="" style="display:inline-block;width:18px;height:18px;">
-                    <span>Click For Coffee</span>
-                  </a>
-                </td>
-              </tr>
-
-              <!-- Single-Line WiseStamp-Style Promotional Agency Footer Banner -->
-              <tr>
-                <td colspan="3" style="background:#0049A8;padding:8px 20px;color:#FFFFFF;font-size:11px;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                    <tr>
-                      <td align="left" style="color:#FFFFFF;font-weight:700;white-space:nowrap;">
-                        <span style="color:#FFCE1B;font-weight:800;">Everything under one happy roof:</span> Digital · Media Buying · PR · Events · Creative
-                      </td>
-                      <td align="right" style="color:#DBEAFE;font-size:10.5px;font-weight:700;white-space:nowrap;">
-                        Trusted by AirAsia · Airbnb · P&amp;G · Celcom · Warner
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="divider-rule"></div>
-
-          <!-- =================================================================
-               EDITION B: THE ROYAL BLUE AGENCY BANNER (Horizontal Split Layout)
-               ================================================================= -->
-          <div class="section-bar">
-            <h2>Alternative Layout: Executive Horizontal Card + Espresso Action Strip</h2>
-            <button type="button" class="btn-mini-copy" id="copy-ed2">Copy Horizontal Edition</button>
-          </div>
-
-          <div id="sig-edition-b">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;max-width:880px;border-collapse:separate;border-spacing:0;background:#FFFFFF;border:1.5px solid #CBD5E1;border-radius:14px;overflow:hidden;box-shadow:0 8px 22px rgba(11,30,63,0.06);font-family:'Plus Jakarta Sans',Arial,Helvetica,sans-serif;">
-              <tr>
-                <td style="padding:15px 22px;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                    <tr>
-                      <td width="94" valign="middle" style="width:94px;padding-right:16px;">
-                        <img src="./assets/tanya-avatar-navy.png" width="84" height="84" alt="Tanya Hyacinth" style="display:block;width:84px;height:84px;border-radius:50%;">
-                      </td>
-                      <td valign="middle" style="border-left:3px solid #FFCE1B;padding-left:16px;">
-                        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;">
-                          <span class="js-name" style="font-size:18.5px;font-weight:800;color:#0B1E3F;">Tanya Hyacinth D’Silva-Fernandez</span>
-                          <span style="font-family:'Caveat',cursive;font-size:21px;font-weight:700;color:#0049A8;">"We want something people remember!"</span>
-                        </div>
-                        <div style="font-size:11.5px;font-weight:700;color:#0049A8;margin-top:2px;margin-bottom:8px;">
-                          Chief Executive Officer (CEO) &nbsp;·&nbsp; Advertising &amp; More Sdn. Bhd. &nbsp;·&nbsp; <span style="color:#B47B00;">★ 100% Success Rate</span>
-                        </div>
-                        <div style="font-size:12px;color:#334155;font-weight:600;">
-                          <a class="js-phone-href" href="tel:+60123456789" style="color:#0B1E3F;text-decoration:none;"><strong style="color:#0049A8;">Tel:</strong> <span class="js-phone">+60 12-345 6789</span></a>
-                          &nbsp;&nbsp;|&nbsp;&nbsp;
-                          <a class="js-email-href" href="mailto:hello@advertisingandmore.com" style="color:#0B1E3F;text-decoration:none;"><strong style="color:#0049A8;">Mail:</strong> <span class="js-email">hello@advertisingandmore.com</span></a>
-                          &nbsp;&nbsp;|&nbsp;&nbsp;
-                          <a href="https://advertisingandmore.com" target="_blank" style="color:#0049A8;text-decoration:none;font-weight:700;">www.advertisingandmore.com</a>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td style="background:#0B1E3F;padding:10px 22px;border-top:2px solid #FFCE1B;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-                    <tr>
-                      <td valign="middle">
-                        <div style="display:flex;align-items:center;gap:12px;">
-                          <img src="./assets/coffee-cup.png" width="34" height="34" alt="Coffee">
-                          <div>
-                            <div style="font-size:12.5px;font-weight:800;color:#FFFFFF;">
-                              Your every Need. Idea. Brand. Right here, ready to ROCK!
-                            </div>
-                            <div style="font-size:10.5px;color:#93C5FD;font-weight:600;">
-                              Scan the QR code or click the button to schedule a coffee chat with Tanya.
-                            </div>
-                          </div>
-                        </div>
-                      </td>
-                      <td align="right" valign="middle" width="240" style="width:240px;white-space:nowrap;">
-                        <div style="display:inline-flex;align-items:center;gap:10px;">
-                          <a href="https://advertisingandmore.com/#contactform" target="_blank" style="background:#FFCE1B;color:#0B1E3F;font-size:11px;font-weight:800;text-transform:uppercase;padding:8px 14px;border-radius:99px;text-decoration:none;">
-                            ☕ Click For Coffee ↗
-                          </a>
-                          <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-block;background:#FFFFFF;padding:3px;border-radius:7px;">
-                            <img src="./assets/qr-coffee-navy.png" width="52" height="52" alt="QR" style="display:block;width:52px;height:52px;">
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-        </div>
+        <div class="win-title">Inbox · Q4 Brand Campaign Proposal</div>
       </div>
-    </div>
 
-    <!-- Right Column: iPhone Mail Mobile View + Compatibility & Brand Spec Card -->
-    <div class="right-col-stack">
-      <div class="phone-shell">
-        <div class="phone-screen">
-          <div class="phone-statusbar">
-            <span>9:41</span>
-            <div class="phone-notch"></div>
-            <span>5G · 100%</span>
+      <div class="win-body">
+        <div>
+          <div class="mail-meta">
+            <div class="mail-from">
+              <strong>Tanya Hyacinth</strong> &lt;hello@advertisingandmore.com&gt;
+            </div>
+            <div class="mail-subj">Shall we walk through the campaign routes over coffee this week?</div>
           </div>
-          <div class="phone-mail-head">
-            <div class="subj">Re: Q4 Integrated Brand Campaign</div>
-            <div class="from">From: <strong class="js-name">Tanya Hyacinth D’Silva-Fernandez</strong></div>
-          </div>
-          <div class="phone-mail-body">
-            <p style="margin-bottom:10px;">
-              Hi Sarah, attached is our deck. Let's grab a coffee this week and make it happen!
-            </p>
 
-            <!-- Mobile Stacked Signature Card -->
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="width:100%;background:#FFFDF9;border:1.5px solid #E5DEC9;border-radius:14px;overflow:hidden;font-family:'Plus Jakarta Sans',Arial,sans-serif;">
+          <p class="mail-Intro">
+            Hi team, thank you for the brief! We have put together three integrated campaign routes across digital, media buying, and experiential. The deck is attached below.
+          </p>
+        </div>
+
+        <!-- THE SIGNATURE BLOCK -->
+        <div id="signature-capture">
+          <div class="sig-card-outer">
+            <table class="sig-main-table" role="presentation" cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td height="4" style="height:4px;background:linear-gradient(90deg,#0B1E3F 0%,#0049A8 60%,#FFCE1B 60%);font-size:0;">&nbsp;</td>
-              </tr>
-              <tr>
-                <td style="padding:13px;">
-                  <div style="display:flex;align-items:center;gap:11px;margin-bottom:9px;">
-                    <img src="./assets/tanya-avatar-cream.png" width="66" height="66" alt="Tanya" style="width:66px;height:66px;border-radius:50%;flex-shrink:0;">
-                    <div>
-                      <div style="font-size:9.5px;font-weight:800;color:#0049A8;text-transform:uppercase;letter-spacing:0.06em;">Advertising &amp; More</div>
-                      <div class="js-name" style="font-size:14.5px;font-weight:800;color:#0B1E3F;line-height:1.2;">Tanya Hyacinth D’Silva-Fernandez</div>
-                      <div style="display:inline-block;background:#FFCE1B;color:#0B1E3F;font-size:9.5px;font-weight:800;padding:2px 6px;border-radius:4px;margin-top:3px;">
-                        CEO · 100% Success Rate
+                <!-- Left: Iconic Top-Down Coffee Cup Portrait -->
+                <td width="184" valign="middle" align="center" style="width:184px;">
+                  <div class="cup-avatar-wrap">
+                    <div class="steam-group">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="cup-handle"></div>
+                    <div class="cup-saucer">
+                      <div class="cup-inner-rim">
+                        <img src="./assets/tanya-avatar-cream.png" alt="Tanya Hyacinth">
                       </div>
                     </div>
-                  </div>
-
-                  <div style="font-size:11px;line-height:1.6;color:#1E293B;padding:7px 10px;background:#FBF7EE;border-radius:8px;margin-bottom:9px;">
-                    <div><strong style="color:#0049A8;">Call / WA:</strong> <span class="js-phone">+60 12-345 6789</span></div>
-                    <div><strong style="color:#0049A8;">Email:</strong> <span class="js-email">hello@advertisingandmore.com</span></div>
-                    <div><strong style="color:#0049A8;">Website:</strong> advertisingandmore.com</div>
-                  </div>
-
-                  <div style="display:flex;align-items:center;justify-content:space-between;background:#0B1E3F;padding:9px 11px;border-radius:10px;color:#FFFFFF;">
-                    <div style="padding-right:8px;">
-                      <div style="font-family:'Caveat',cursive;font-size:18px;color:#FFCE1B;line-height:1;">Warmly, Tanya</div>
-                      <div style="font-size:9.5px;color:#CBD5E1;margin:2px 0 6px;">Scan or tap for coffee:</div>
-                      <a href="https://advertisingandmore.com/#contactform" target="_blank" style="display:inline-flex;align-items:center;gap:5px;background:#FFCE1B;color:#0B1E3F;font-size:10px;font-weight:800;padding:5px 9px;border-radius:99px;text-decoration:none;">
-                        <img src="./assets/coffee-cup.png" width="14" height="14" alt="">
-                        <span>CLICK FOR COFFEE</span>
-                      </a>
+                    <div class="success-seal">
+                      <strong>100%</strong>
+                      <span>Success<br>Rate</span>
                     </div>
-                    <a href="https://advertisingandmore.com/#contactform" target="_blank" style="background:#FFFFFF;padding:4px;border-radius:8px;flex-shrink:0;">
-                      <img src="./assets/qr-coffee-navy.png" width="64" height="64" alt="QR" style="display:block;width:64px;height:64px;">
+                  </div>
+                </td>
+
+                <!-- Center: Clean, Spacious Executive Bio -->
+                <td class="bio-col" valign="middle">
+                  <div class="script-greeting">Cheers &amp; coffee soon,</div>
+                  <div class="exec-name">
+                    <span class="js-first">Tanya Hyacinth</span><br>
+                    <em class="js-last" style="font-weight:600;font-style:italic;">D’Silva-Fernandez</em>
+                  </div>
+                  <div class="exec-role">Chief Executive Officer &nbsp;·&nbsp; Advertising &amp; More</div>
+
+                  <div class="bean-divider">
+                    <span class="line-gold"></span>
+                    <span class="bean-dot"></span>
+                    <span class="line-soft"></span>
+                  </div>
+
+                  <table class="contact-grid" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td>
+                        <a class="contact-link" href="tel:+60123456789">
+                          <span class="icon-box">✆</span>
+                          <span>+60 12-345 6789</span>
+                        </a>
+                      </td>
+                      <td>
+                        <a class="contact-link" href="https://advertisingandmore.com" target="_blank">
+                          <span class="icon-box">🌐</span>
+                          <span>advertisingandmore.com</span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top:10px;">
+                        <a class="contact-link" href="mailto:hello@advertisingandmore.com">
+                          <span class="icon-box">✉</span>
+                          <span>hello@advertisingandmore.com</span>
+                        </a>
+                      </td>
+                      <td style="padding-top:10px;">
+                        <div class="social-Cluster">
+                          <a class="soc-pill" href="https://advertisingandmore.com" target="_blank">f</a>
+                          <a class="soc-pill" href="https://advertisingandmore.com" target="_blank">in</a>
+                          <a class="soc-pill" href="https://wa.me/60123456789" target="_blank">wa</a>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+
+                <!-- Right: Perforated Coffee Ticket Stub -->
+                <td width="204" valign="middle" align="center" style="width:204px;">
+                  <div class="coffee-ticket">
+                    <div class="ticket-header">☕ Coffee Ticket</div>
+                    <a class="ticket-qr-box" href="https://advertisingandmore.com/#contactform" target="_blank">
+                      <img src="./assets/qr-coffee-navy.png" alt="Scan for Coffee">
+                    </a>
+                    <div class="ticket-perf"></div>
+                    <a class="ticket-cta" href="https://advertisingandmore.com/#contactform" target="_blank">
+                      <img src="./assets/coffee-cup.png" width="16" height="16" alt="" style="width:16px;height:16px;">
+                      <span>Click For Coffee →</span>
                     </a>
                   </div>
                 </td>
               </tr>
             </table>
           </div>
+
+          <!-- Bottom Pill Bar -->
+          <div class="agency-pill-bar">
+            <div class="agency-pill-left">
+              <img src="./assets/coffee-cup.png" alt="A&M Coffee">
+              <div class="agency-brand-name">Advertising <span>&amp; More</span></div>
+              <div class="agency-roof-tag">Everything You Need, <strong>Under One Happy Roof</strong></div>
+            </div>
+            <a class="agency-pill-cta" href="https://advertisingandmore.com/#contactform" target="_blank">
+              Book a free strategy coffee →
+            </a>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- Technical & Brand Delivery Spec Card -->
-      <div class="spec-card">
-        <h3>
-          <span>Email Client Compatibility &amp; Deliverables</span>
-          <span style="font-size:11px;color:#166534;background:#DCFCE7;padding:2px 7px;border-radius:99px;">Verified HTML Table</span>
-        </h3>
-        <div class="spec-grid">
-          <div class="spec-item">
-            <strong>Desktop &amp; Mobile</strong>
-            Gmail, Outlook, Apple Mail, iOS Mail
+    <!-- Right Column: Mobile View -->
+    <div class="mobile-col">
+      <div class="mobile-label">Mobile View · 375 PX</div>
+      <div class="iphone-frame">
+        <div class="iphone-screen">
+          <div>
+            <div class="iphone-notch"></div>
+            <div class="skeleton-lines">
+              <div class="sk-line w1"></div>
+              <div class="sk-line w2"></div>
+              <div class="sk-line w3"></div>
+            </div>
           </div>
-          <div class="spec-item">
-            <strong>Scannable QR Code</strong>
-            Routes to #contactform CTA
+
+          <div class="mob-sig-card">
+            <div class="mob-avatar">
+              <img src="./assets/tanya-avatar-cream.png" alt="Tanya Hyacinth">
+            </div>
+            <div class="mob-greeting">Cheers &amp; coffee soon,</div>
+            <div class="mob-name">
+              <span class="js-first">Tanya Hyacinth</span><br>
+              <em class="js-last" style="font-weight:600;font-style:italic;">D’Silva-Fernandez</em>
+            </div>
+            <div class="mob-role">Chief Executive Officer</div>
+
+            <div class="mob-quick-btns">
+              <a class="mob-qbtn" href="tel:+60123456789" title="Call">✆</a>
+              <a class="mob-qbtn" href="mailto:hello@advertisingandmore.com" title="Email">✉</a>
+              <a class="mob-qbtn" href="https://advertisingandmore.com" target="_blank" title="Website">🌐</a>
+              <a class="mob-qbtn" href="https://advertisingandmore.com" target="_blank" title="LinkedIn">in</a>
+            </div>
+
+            <a class="mob-coffee-btn" href="https://advertisingandmore.com/#contactform" target="_blank">
+              <img src="./assets/coffee-cup.png" width="16" height="16" alt="" style="width:16px;height:16px;">
+              <span>Click For Coffee →</span>
+            </a>
+
+            <div class="mob-roof-pill">
+              Under One <span>Happy Roof</span>
+            </div>
           </div>
-          <div class="spec-item">
-            <strong>Interactive Links</strong>
-            Tel, WhatsApp, Email, Web, Social
-          </div>
-          <div class="spec-item">
-            <strong>Editable Source</strong>
-            HTML Table + High-Res PNG/SVG
-          </div>
-        </div>
-        <div class="color-swatches">
-          <span>Brand Palette:</span>
-          <span class="swatch-pill"><span class="swatch-dot" style="background:#0B1E3F;"></span>#0B1E3F</span>
-          <span class="swatch-pill"><span class="swatch-dot" style="background:#0049A8;"></span>#0049A8</span>
-          <span class="swatch-pill"><span class="swatch-dot" style="background:#FFCE1B;"></span>#FFCE1B</span>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="toast-banner" id="toast">Signature copied to clipboard! Paste directly into Gmail, Apple Mail, or Outlook.</div>
+<div class="toast" id="toast">Signature copied! Paste directly into Gmail, Apple Mail, or Outlook.</div>
 
 <script>
-  const nameBtns = document.querySelectorAll('[data-name]');
-  const phoneInput = document.getElementById('phone-input');
-  const emailInput = document.getElementById('email-input');
-  const mailWin = document.getElementById('desktop-mail-window');
-  const btnLight = document.getElementById('btn-light');
-  const btnDark = document.getElementById('btn-dark');
-  const toast = document.getElementById('toast');
-
-  function showToast(msg) {
-    toast.textContent = msg;
-    toast.style.display = 'block';
-    clearTimeout(window.__toastTimer);
-    window.__toastTimer = setTimeout(() => { toast.style.display = 'none'; }, 3200);
-  }
-
-  function syncFields(customName) {
-    if (customName) {
-      document.querySelectorAll('.js-name').forEach(el => { el.textContent = customName; });
-    }
-    const ph = phoneInput.value.trim();
-    const digits = ph.replace(/[^+\d]/g, '');
-    const waDigits = ph.replace(/\D/g, '');
-    document.querySelectorAll('.js-phone').forEach(el => { el.textContent = ph; });
-    document.querySelectorAll('.js-phone-href').forEach(el => { el.href = 'tel:' + digits; });
-    document.querySelectorAll('.js-wa-href').forEach(el => { el.href = 'https://wa.me/' + waDigits; });
-
-    const em = emailInput.value.trim();
-    document.querySelectorAll('.js-email').forEach(el => { el.textContent = em; });
-    document.querySelectorAll('.js-email-href').forEach(el => { el.href = 'mailto:' + em; });
-  }
-
-  nameBtns.forEach(btn => {
+  const buttons = document.querySelectorAll('.name-switcher button');
+  buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      nameBtns.forEach(b => b.classList.remove('active'));
+      buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      syncFields(btn.getAttribute('data-name'));
+      const first = btn.getAttribute('data-first');
+      const last = btn.getAttribute('data-last');
+      document.querySelectorAll('.js-first').forEach(el => { el.textContent = first; });
+      document.querySelectorAll('.js-last').forEach(el => { el.textContent = last; });
     });
   });
 
-  phoneInput.addEventListener('input', () => syncFields());
-  emailInput.addEventListener('input', () => syncFields());
-
-  btnLight.addEventListener('click', () => {
-    btnLight.classList.add('active');
-    btnDark.classList.remove('active');
-    mailWin.classList.remove('dark-client');
-  });
-
-  btnDark.addEventListener('click', () => {
-    btnDark.classList.add('active');
-    btnLight.classList.remove('active');
-    mailWin.classList.add('dark-client');
-  });
-
-  async function copySignatureBlock(containerId, label) {
-    const el = document.getElementById(containerId);
-    if (!el) return;
-    const absBase = 'https://frank20190926.github.io/am-email-signature/assets/';
-    const html = el.innerHTML.replace(/\.\/assets\//g, absBase);
-    try {
-      if (navigator.clipboard && window.ClipboardItem) {
-        const blobHtml = new Blob([html], { type: 'text/html' });
-        const blobText = new Blob([el.innerText], { type: 'text/plain' });
-        await navigator.clipboard.write([new ClipboardItem({ 'text/html': blobHtml, 'text/plain': blobText })]);
-        showToast(label + ' copied with hosted image URLs! Press Cmd+V / Ctrl+V in Gmail or Outlook.');
-        return;
-      }
-    } catch (e) {}
+  document.getElementById('copy-btn').addEventListener('click', async () => {
+    const el = document.getElementById('signature-capture');
     const range = document.createRange();
     range.selectNodeContents(el);
     const sel = window.getSelection();
@@ -914,11 +1024,10 @@
     sel.addRange(range);
     document.execCommand('copy');
     sel.removeAllRanges();
-    showToast(label + ' copied to clipboard!');
-  }
-
-  document.getElementById('copy-ed1').addEventListener('click', () => copySignatureBlock('sig-edition-a', 'Primary Espresso Desk Signature'));
-  document.getElementById('copy-ed2').addEventListener('click', () => copySignatureBlock('sig-edition-b', 'Horizontal Agency Signature'));
+    const toast = document.getElementById('toast');
+    toast.style.display = 'block';
+    setTimeout(() => { toast.style.display = 'none'; }, 3000);
+  });
 </script>
 </body>
 </html>
