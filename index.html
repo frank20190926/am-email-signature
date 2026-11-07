@@ -6,18 +6,22 @@
 <title>Advertising &amp; More (A&amp;M) · Executive Email Signature</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy-deep: #0B1B36;
-    --navy-card: #0F2347;
-    --royal-blue: #0049A8;
-    --gold-bright: #FFCE1B;
-    --gold-warm: #E5A91A;
-    --cream-bg: #FAF5EA;
-    --cream-soft: #F3EBDD;
-    --cream-border: #E6Dbc8;
-    --coral-accent: #E86B32;
+    --navy-950: #061022;
+    --navy-900: #09162E;
+    --navy-800: #112448;
+    --linen-100: #FBF8F2;
+    --linen-200: #F4EDE0;
+    --linen-border: #E2D5BE;
+    --gold-light: #F6E6BC;
+    --gold-mid: #D6AE4E;
+    --gold-deep: #A67B1E;
+    --gold-foil: linear-gradient(135deg, #F7E8C2 0%, #DFB95B 42%, #B88A28 82%, #D9B354 100%);
+    --gold-subtle: rgba(214, 174, 78, 0.28);
+    --ink-900: #0B182E;
+    --ink-600: #475569;
   }
 
   * {
@@ -27,12 +31,15 @@
   }
 
   body {
-    background: radial-gradient(circle at 18% 15%, #173263 0%, #0B1B36 58%, #071226 100%);
-    color: #0F172A;
+    background:
+      radial-gradient(ellipse 75% 65% at 22% 14%, rgba(28, 56, 110, 0.65) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 60% at 85% 88%, rgba(197, 155, 39, 0.10) 0%, transparent 60%),
+      linear-gradient(160deg, #0B1933 0%, #061022 65%, #040B18 100%);
+    color: var(--ink-900);
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
-    padding: 34px 42px 38px;
+    padding: 36px 46px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,11 +47,13 @@
 
   .canvas {
     width: 100%;
-    max-width: 1356px;
+    max-width: 1348px;
     margin: 0 auto;
   }
 
-  /* Editorial Header: Clean, Spacious, Zero Clutter */
+  /* =====================================================================
+     EDITORIAL HEADER: HIGH-CONTRAST SERIF & BRUSHED GOLD FOIL ACCENTS
+     ===================================================================== */
   .hero-bar {
     display: flex;
     align-items: flex-end;
@@ -54,103 +63,132 @@
   }
 
   .eyebrow {
-    font-size: 11.5px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--gold-bright);
+    color: var(--gold-mid);
     margin-bottom: 8px;
   }
 
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--gold-mid);
+    opacity: 0.75;
+  }
+
   .hero-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 40px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 46px;
     font-weight: 700;
-    line-height: 1.08;
+    line-height: 1.02;
     color: #FFFFFF;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
   }
 
   .hero-title em {
+    font-family: 'Cormorant Garamond', Georgia, serif;
     font-style: italic;
     font-weight: 600;
-    color: var(--gold-bright);
+    background: var(--gold-foil);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 4px;
   }
 
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     padding-bottom: 4px;
   }
 
   .name-switcher {
     display: inline-flex;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(214, 174, 78, 0.24);
     border-radius: 99px;
     padding: 4px;
     gap: 4px;
+    backdrop-filter: blur(8px);
   }
 
   .name-switcher button {
     background: transparent;
     border: none;
-    color: #CBD5E1;
+    color: #94A3B8;
     font-family: inherit;
-    font-size: 12px;
+    font-size: 11.5px;
     font-weight: 600;
-    padding: 6px 13px;
+    letter-spacing: 0.02em;
+    padding: 6px 14px;
     border-radius: 99px;
     cursor: pointer;
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
   }
 
   .name-switcher button.active {
-    background: #FFFFFF;
-    color: var(--navy-deep);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--navy-900);
     font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .btn-copy-main {
-    background: var(--gold-bright);
-    color: var(--navy-deep);
-    border: none;
+    background: var(--gold-foil);
+    color: var(--navy-950);
+    border: 1px solid rgba(255, 248, 225, 0.55);
     border-radius: 99px;
-    padding: 10px 20px;
+    padding: 10px 22px;
     font-family: inherit;
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(255, 206, 27, 0.28);
-    text-decoration: none;
+    box-shadow: 0 10px 24px rgba(184, 138, 40, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.65);
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 8px;
   }
 
-  /* Two-Column Stage: 1 Spacious Desktop Preview + 1 Clean Mobile Preview */
+  /* =====================================================================
+     STAGE GRID: DESKTOP CLIENT LEFT + SARTORIAL MOBILE RIGHT
+     ===================================================================== */
   .stage-grid {
     display: grid;
-    grid-template-columns: 1fr 330px;
+    grid-template-columns: 1fr 334px;
     gap: 32px;
     align-items: stretch;
   }
 
-  /* Desktop Email Window */
   .desktop-window {
     background: #FFFFFF;
-    border-radius: 18px;
-    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.38);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow:
+      0 32px 70px rgba(2, 8, 20, 0.55),
+      0 4px 16px rgba(2, 8, 20, 0.25);
     overflow: hidden;
     display: flex;
     flex-direction: column;
   }
 
   .win-chrome {
-    background: #F4F6F9;
-    border-bottom: 1px solid #E5E9F0;
-    padding: 13px 22px;
+    background: #F7F8FA;
+    border-bottom: 1px solid #EAEEF4;
+    padding: 13px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .win-chrome-left {
     display: flex;
     align-items: center;
     gap: 14px;
@@ -158,27 +196,36 @@
 
   .win-dots {
     display: flex;
-    gap: 8px;
+    gap: 7px;
   }
 
   .win-dots span {
-    width: 11px;
-    height: 11px;
+    width: 10.5px;
+    height: 10.5px;
     border-radius: 50%;
   }
 
-  .win-dots .r { background: #FF5F56; }
-  .win-dots .y { background: #FFBD2E; }
-  .win-dots .g { background: #27C93F; }
+  .win-dots .r { background: #E56B6F; }
+  .win-dots .y { background: #E9B872; }
+  .win-dots .g { background: #6AB187; }
 
   .win-title {
-    font-size: 12.5px;
+    font-size: 12px;
     font-weight: 600;
-    color: #8492A6;
+    color: #94A3B8;
+    letter-spacing: 0.01em;
+  }
+
+  .win-badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #9A7422;
   }
 
   .win-body {
-    padding: 26px 34px 32px;
+    padding: 22px 26px 26px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -186,320 +233,323 @@
   }
 
   .mail-meta {
-    margin-bottom: 18px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid #F1F5F9;
-  }
-
-  .mail-from {
-    font-size: 13.5px;
-    color: #64748B;
-    margin-bottom: 4px;
-  }
-
-  .mail-from strong {
-    color: #0F172A;
-    font-weight: 700;
-    margin-right: 6px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #F1F4F9;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
 
   .mail-subj {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 20px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22px;
     font-weight: 700;
-    color: #0B1B36;
-    margin-top: 8px;
+    color: var(--navy-900);
+    letter-spacing: -0.01em;
   }
 
-  .mail-Intro {
-    font-size: 14.5px;
+  .mail-from {
+    font-size: 12px;
+    color: #64748B;
+  }
+
+  .mail-from strong {
+    color: var(--navy-900);
+    font-weight: 700;
+  }
+
+  .mail-intro {
+    font-size: 13.5px;
     line-height: 1.65;
-    color: #334155;
-    margin-bottom: 24px;
+    color: #475569;
+    margin-bottom: 20px;
     max-width: 680px;
   }
 
   /* =====================================================================
-     SIGNATURE CARD: SPACIOUS, ICONIC TOP-DOWN COFFEE CUP + TICKET STUB
+     COUTURE LINEN SIGNATURE CARD (60% Warm Linen, 30% Midnight, 10% Gold)
      ===================================================================== */
   .sig-card-outer {
-    background: var(--cream-bg);
-    border: 1.5px solid var(--cream-border);
+    position: relative;
+    background: linear-gradient(145deg, #FCF9F3 0%, #F4ECE0 100%);
+    border: 1px solid #DFD2BC;
     border-radius: 20px;
-    padding: 24px 24px 24px 28px;
-    box-shadow: 0 12px 30px rgba(11, 27, 54, 0.05);
+    padding: 20px 20px 20px 18px;
+    box-shadow:
+      0 18px 40px rgba(9, 22, 46, 0.07),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+  }
+
+  /* Inner Fine Gold Hairline Frame (Bespoke Stationery Detail) */
+  .sig-card-outer::before {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(197, 155, 39, 0.24);
+    border-radius: 14px;
+    pointer-events: none;
+  }
+
+  /* Subtle Fine Linen Texture Overlay */
+  .linen-grain {
+    position: absolute;
+    inset: 0;
+    opacity: 0.035;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
   .sig-main-table {
     width: 100%;
     border-collapse: collapse;
+    position: relative;
+    z-index: 1;
   }
 
-  /* Top-Down Coffee Cup Frame Around Portrait */
-  .cup-avatar-wrap {
+  /* Column 1: 3D Sculpted Bone-China Cup Portrait + Bezier Steam + Foil Seal */
+  .cup-stage {
     position: relative;
-    width: 168px;
-    height: 168px;
+    width: 182px;
+    height: 178px;
     margin: 0 auto;
-  }
-
-  /* Steam wisps above the cup */
-  .steam-group {
-    position: absolute;
-    top: -18px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: 11px;
-  }
-
-  .steam-group span {
-    width: 3px;
-    height: 13px;
-    border-radius: 99px;
-    background: var(--gold-warm);
-    opacity: 0.65;
-    transform: rotate(12deg);
-  }
-
-  .steam-group span:nth-child(2) {
-    height: 16px;
-    margin-top: -3px;
-    opacity: 0.9;
-  }
-
-  /* Coffee mug handle on the right */
-  .cup-handle {
-    position: absolute;
-    right: -14px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 46px;
-    border: 7px solid var(--navy-deep);
-    border-left: none;
-    border-radius: 0 18px 18px 0;
-    background: transparent;
-    box-shadow: 3px 4px 10px rgba(11, 27, 54, 0.12);
-  }
-
-  /* White ceramic saucer & rim */
-  .cup-saucer {
-    width: 162px;
-    height: 162px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    padding: 11px;
-    box-shadow: 0 12px 28px rgba(11, 27, 54, 0.14), inset 0 0 0 1px #EAE0CE;
-    position: relative;
-  }
-
-  .cup-inner-rim {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: var(--navy-deep);
-    padding: 5px;
-    border: 2.5px solid var(--gold-bright);
-    overflow: hidden;
-  }
-
-  .cup-inner-rim img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Gold 100% Success Seal */
-  .success-seal {
-    position: absolute;
-    bottom: 2px;
-    left: -4px;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, #FFE055 0%, #E0A112 85%);
-    border: 3px solid #FFFDF9;
-    box-shadow: 0 6px 14px rgba(11, 27, 54, 0.25);
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--navy-deep);
-    transform: rotate(-10deg);
   }
 
-  .success-seal strong {
-    font-size: 13px;
-    font-weight: 800;
-    line-height: 1;
+  .steam-svg {
+    position: absolute;
+    top: -12px;
+    left: 46%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 24px;
+    overflow: visible;
   }
 
-  .success-seal span {
-    font-size: 6.5px;
-    font-weight: 800;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    line-height: 1.1;
-    text-align: center;
-    margin-top: 2px;
+  .cup-portrait-img {
+    width: 182px;
+    height: 168px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 8px 18px rgba(9, 22, 46, 0.10));
   }
 
-  /* Center Bio Column */
+  /* Embossed Metallic Gold Foil Seal (SVG + Typography) */
+  .foil-seal {
+    position: absolute;
+    bottom: 4px;
+    left: 2px;
+    width: 54px;
+    height: 54px;
+    transform: rotate(-8deg);
+    filter: drop-shadow(0 6px 12px rgba(9, 22, 46, 0.24));
+  }
+
+  /* Column 2: Editorial Bio & Custom 1.5px Vector Contact Matrix */
   .bio-col {
-    padding: 0 28px 0 26px;
+    padding: 2px 18px 2px 14px;
   }
 
-  .script-greeting {
-    font-family: 'Caveat', cursive;
-    font-size: 27px;
-    font-weight: 700;
-    color: var(--coral-accent);
+  .calligraphy-row {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+  }
+
+  .calligraphy-greeting {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 600;
+    color: #9A7220;
     line-height: 1;
-    margin-bottom: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .calligraphy-flourish {
+    width: 138px;
+    height: 9px;
+    margin-top: 3px;
   }
 
   .exec-name {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 31px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 36px;
     font-weight: 700;
-    color: var(--navy-deep);
-    line-height: 1.12;
-    letter-spacing: -0.02em;
+    color: var(--navy-900);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+  }
+
+  .exec-name .last-name {
+    font-style: italic;
+    font-weight: 600;
+    color: #162B52;
   }
 
   .exec-role {
-    font-size: 11.5px;
+    font-size: 10px;
     font-weight: 800;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #9A6B13;
-    margin-top: 8px;
-    margin-bottom: 16px;
+    color: #8C671A;
+    margin-top: 9px;
+    margin-bottom: 14px;
   }
 
-  .bean-divider {
+  /* Bespoke Coffee Bean & Gold Hairline Divider */
+  .luxury-divider {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
-  .bean-divider .line-gold {
-    width: 34px;
-    height: 2.5px;
-    background: var(--gold-warm);
-    border-radius: 2px;
+  .luxury-divider .gold-bar {
+    width: 38px;
+    height: 1.5px;
+    background: var(--gold-foil);
   }
 
-  .bean-divider .bean-dot {
-    width: 9px;
-    height: 7px;
-    background: #784B12;
-    border-radius: 50%;
-    transform: rotate(-25deg);
-  }
-
-  .bean-divider .line-soft {
+  .luxury-divider .hairline {
     flex: 1;
     height: 1px;
-    background: #E5DEC9;
+    background: linear-gradient(90deg, #DBCBAE 0%, rgba(219, 203, 174, 0.15) 100%);
   }
 
+  /* Contact Matrix with Custom 1.5px SVG Icons */
   .contact-grid {
     width: 100%;
     border-collapse: collapse;
   }
 
   .contact-grid td {
-    padding: 5px 14px 5px 0;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: #1E293B;
+    padding: 5px 12px 5px 0;
     white-space: nowrap;
   }
 
   .contact-link {
-    color: #1E293B;
+    color: var(--navy-900);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    font-variant-numeric: tabular-nums;
   }
 
-  .icon-box {
-    width: 26px;
-    height: 26px;
-    border-radius: 7px;
-    background: var(--navy-deep);
-    color: var(--gold-bright);
+  .svg-icon-box {
+    width: 27px;
+    height: 27px;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #112448 0%, #081329 100%);
+    border: 1px solid rgba(214, 174, 78, 0.42);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
     flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(9, 22, 46, 0.12);
   }
 
-  .social-Cluster {
+  .svg-icon-box svg {
+    width: 13.5px;
+    height: 13.5px;
+    stroke: #E8C66A;
+    stroke-width: 1.7;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .social-row {
     display: inline-flex;
     align-items: center;
     gap: 7px;
   }
 
-  .soc-pill {
-    width: 26px;
-    height: 26px;
-    border-radius: 7px;
-    border: 1.5px solid var(--navy-deep);
-    color: var(--navy-deep);
-    font-size: 11px;
-    font-weight: 800;
-    text-decoration: none;
+  .soc-badge {
+    width: 27px;
+    height: 27px;
+    border-radius: 8px;
+    background: rgba(9, 22, 46, 0.04);
+    border: 1px solid rgba(9, 22, 46, 0.22);
+    color: var(--navy-900);
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    transition: all 0.15s ease;
   }
 
-  /* Right Perforated Coffee Ticket Stub */
+  .soc-badge svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--navy-900);
+    stroke-width: 1.7;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Column 3: Sartorial Midnight Navy & Gold Foil Coffee Pass */
   .coffee-ticket {
-    width: 214px;
-    background: var(--navy-deep);
+    width: 196px;
+    background: linear-gradient(160deg, #112448 0%, #081328 100%);
+    border: 1px solid rgba(214, 174, 78, 0.38);
     border-radius: 16px;
-    padding: 16px 15px 14px;
+    padding: 14px 13px 13px;
     text-align: center;
     position: relative;
-    box-shadow: 0 12px 26px rgba(11, 27, 54, 0.18);
+    box-shadow:
+      0 16px 32px rgba(6, 16, 34, 0.22),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
 
   .ticket-header {
-    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 9.5px;
     font-weight: 800;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--gold-bright);
+    color: #E8C66A;
     margin-bottom: 10px;
   }
 
-  .ticket-qr-box {
-    background: #FFFFFF;
-    padding: 9px;
-    border-radius: 12px;
-    display: inline-block;
+  .ticket-header svg {
+    width: 13px;
+    height: 13px;
+    stroke: #E8C66A;
+    stroke-width: 1.8;
+    fill: none;
   }
 
-  .ticket-qr-box img {
-    width: 118px;
-    height: 118px;
+  .ticket-qr-frame {
+    background: #FFFFFF;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(214, 174, 78, 0.55);
+    display: inline-block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+  }
+
+  .ticket-qr-frame img {
+    width: 114px;
+    height: 114px;
     display: block;
   }
 
-  /* Ticket Side Notches & Perforation */
+  /* Precision Ticket Notches & Gold Perforation */
   .ticket-perf {
     position: relative;
-    margin: 13px -16px 11px;
-    border-top: 1.5px dashed rgba(255, 206, 27, 0.35);
+    margin: 13px -15px 11px;
+    border-top: 1px dashed rgba(214, 174, 78, 0.42);
     height: 1px;
   }
 
@@ -508,14 +558,22 @@
     content: '';
     position: absolute;
     top: -8px;
-    width: 16px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background: var(--cream-bg);
+    background: #F5EDE1;
+    border: 1px solid rgba(214, 174, 78, 0.35);
   }
 
-  .ticket-perf::before { left: -8px; }
-  .ticket-perf::after { right: -8px; }
+  .ticket-perf::before {
+    left: -8px;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+
+  .ticket-perf::after {
+    right: -8px;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  }
 
   .ticket-cta {
     display: inline-flex;
@@ -524,81 +582,106 @@
     gap: 6px;
     width: 100%;
     white-space: nowrap;
-    background: var(--gold-bright);
-    color: var(--navy-deep);
-    font-size: 10.5px;
+    background: var(--gold-foil);
+    color: var(--navy-950);
+    font-size: 9.5px;
     font-weight: 800;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    padding: 9px 12px;
+    padding: 9px 10px;
     border-radius: 99px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(255, 206, 27, 0.3);
+    box-shadow: 0 6px 16px rgba(184, 138, 40, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.65);
   }
 
-  /* Bottom Agency Pill Banner */
-  .agency-pill-bar {
+  .ticket-cta svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--navy-950);
+    stroke-width: 2.2;
+    fill: none;
+  }
+
+  /* Bottom Sartorial Midnight Ribbon (Strictly Navy + Brushed Gold, No Orange) */
+  .agency-ribbon {
     margin-top: 12px;
-    background: var(--navy-deep);
+    background: linear-gradient(90deg, #081328 0%, #102345 55%, #081328 100%);
+    border: 1px solid rgba(214, 174, 78, 0.32);
     border-radius: 14px;
     padding: 10px 14px 10px 18px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #FFFFFF;
+    box-shadow: 0 10px 24px rgba(6, 16, 34, 0.14);
   }
 
-  .agency-pill-left {
+  .ribbon-left {
     display: flex;
     align-items: center;
     gap: 12px;
   }
 
-  .agency-pill-left img {
-    width: 28px;
-    height: 28px;
+  .ribbon-left img {
+    width: 26px;
+    height: 26px;
     object-fit: contain;
   }
 
-  .agency-brand-name {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 14.5px;
+  .ribbon-brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17px;
     font-weight: 700;
     color: #FFFFFF;
+    letter-spacing: 0.01em;
   }
 
-  .agency-brand-name span {
-    color: var(--gold-bright);
+  .ribbon-brand em {
     font-style: italic;
+    color: #E8C66A;
   }
 
-  .agency-roof-tag {
-    font-size: 10.5px;
-    font-weight: 800;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #CBD5E1;
-    padding-left: 12px;
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  .agency-roof-tag strong {
-    color: var(--gold-bright);
-  }
-
-  .agency-pill-cta {
-    background: linear-gradient(135deg, #F07B3F 0%, #D95326 100%);
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 12px;
+  .ribbon-tagline {
+    font-size: 10px;
     font-weight: 700;
-    padding: 8px 16px;
-    border-radius: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #94A3B8;
+    padding-left: 14px;
+    border-left: 1px solid rgba(214, 174, 78, 0.25);
+  }
+
+  .ribbon-tagline strong {
+    color: #E8C66A;
+    font-weight: 800;
+  }
+
+  .ribbon-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(214, 174, 78, 0.12);
+    border: 1px solid rgba(214, 174, 78, 0.48);
+    color: #F6E6BC;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 7.5px 15px;
+    border-radius: 99px;
     white-space: nowrap;
   }
 
+  .ribbon-cta svg {
+    width: 12px;
+    height: 12px;
+    stroke: #E8C66A;
+    stroke-width: 2;
+    fill: none;
+  }
+
   /* =====================================================================
-     RIGHT COLUMN: CLEAN MOBILE VIEW WITH SKELETON EMAIL LINES
+     RIGHT COLUMN: MOBILE VIEW WITH MATCHING EDITORIAL LUXURY
      ===================================================================== */
   .mobile-col {
     display: flex;
@@ -609,29 +692,39 @@
   .mobile-label {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 11.5px;
-    font-weight: 800;
-    letter-spacing: 0.16em;
+    justify-content: space-between;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #CBD5E1;
+    color: #94A3B8;
     margin-bottom: 12px;
+    padding: 0 4px;
   }
 
-  .mobile-label::before {
+  .mobile-label span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #E8C66A;
+  }
+
+  .mobile-label span::before {
     content: '';
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
-    background: var(--gold-bright);
+    background: #D6AE4E;
   }
 
   .iphone-frame {
-    background: #071124;
+    background: linear-gradient(160deg, #10203F 0%, #050C1A 100%);
     border-radius: 42px;
     padding: 12px;
-    border: 3px solid #233863;
-    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.45);
+    border: 2px solid rgba(214, 174, 78, 0.32);
+    box-shadow:
+      0 32px 70px rgba(2, 8, 20, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
     flex: 1;
     display: flex;
   }
@@ -639,7 +732,7 @@
   .iphone-screen {
     background: #FFFFFF;
     border-radius: 31px;
-    padding: 14px 16px 18px;
+    padding: 14px 16px 16px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -647,53 +740,59 @@
   }
 
   .iphone-notch {
-    width: 92px;
-    height: 20px;
-    background: #0B1B36;
+    width: 88px;
+    height: 19px;
+    background: #061022;
     border-radius: 99px;
-    margin: 0 auto 14px;
+    margin: 0 auto 12px;
   }
 
-  /* Clean Skeleton Lines Instead of Noisy Email Text */
   .skeleton-lines {
-    margin-bottom: 16px;
-    padding: 6px 4px 14px;
+    margin-bottom: 14px;
+    padding: 4px 4px 12px;
     border-bottom: 1px solid #F1F5F9;
   }
 
   .sk-line {
-    height: 8px;
-    background: #E2E8F0;
+    height: 7px;
+    background: #E8EDF4;
     border-radius: 99px;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
   }
 
-  .sk-line.w1 { width: 88%; background: #CBD5E1; height: 10px; margin-bottom: 11px; }
-  .sk-line.w2 { width: 76%; }
-  .sk-line.w3 { width: 54%; margin-bottom: 0; }
+  .sk-line.w1 { width: 84%; background: #CBD5E1; height: 9px; margin-bottom: 10px; }
+  .sk-line.w2 { width: 72%; }
+  .sk-line.w3 { width: 48%; margin-bottom: 0; }
 
-  /* Mobile Stacked Card */
   .mob-sig-card {
-    background: var(--cream-bg);
-    border: 1.5px solid var(--cream-border);
+    position: relative;
+    background: linear-gradient(145deg, #FCF9F3 0%, #F4ECE0 100%);
+    border: 1px solid #DFD2BC;
     border-radius: 20px;
-    padding: 20px 16px 18px;
+    padding: 18px 16px 16px;
     text-align: center;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 12px 26px rgba(9, 22, 46, 0.06);
+  }
+
+  .mob-sig-card::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(197, 155, 39, 0.22);
+    border-radius: 15px;
+    pointer-events: none;
   }
 
   .mob-avatar {
-    width: 96px;
-    height: 96px;
+    width: 98px;
+    height: 98px;
+    margin: 0 auto 8px;
     border-radius: 50%;
-    margin: 0 auto 10px;
-    background: var(--navy-deep);
-    padding: 4px;
-    border: 2.5px solid var(--gold-bright);
-    box-shadow: 0 8px 20px rgba(11, 27, 54, 0.16);
+    filter: drop-shadow(0 8px 16px rgba(9, 22, 46, 0.16));
   }
 
   .mob-avatar img {
@@ -704,30 +803,36 @@
   }
 
   .mob-greeting {
-    font-family: 'Caveat', cursive;
-    font-size: 21px;
-    font-weight: 700;
-    color: var(--coral-accent);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    color: #9A7220;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .mob-name {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 19.5px;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 23px;
     font-weight: 700;
-    color: var(--navy-deep);
-    line-height: 1.15;
+    color: var(--navy-900);
+    line-height: 1.06;
+  }
+
+  .mob-name em {
+    font-style: italic;
+    font-weight: 600;
   }
 
   .mob-role {
-    font-size: 9.5px;
+    font-size: 8.5px;
     font-weight: 800;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #9A6B13;
-    margin-top: 5px;
-    margin-bottom: 14px;
+    color: #8C671A;
+    margin-top: 6px;
+    margin-bottom: 12px;
   }
 
   .mob-quick-btns {
@@ -738,16 +843,25 @@
   }
 
   .mob-qbtn {
-    background: var(--navy-deep);
-    color: var(--gold-bright);
+    background: linear-gradient(145deg, #112448 0%, #081329 100%);
+    border: 1px solid rgba(214, 174, 78, 0.42);
     height: 36px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(9, 22, 46, 0.12);
+  }
+
+  .mob-qbtn svg {
+    width: 14px;
+    height: 14px;
+    stroke: #E8C66A;
+    stroke-width: 1.7;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
   }
 
   .mob-coffee-btn {
@@ -756,45 +870,54 @@
     justify-content: center;
     gap: 8px;
     width: 100%;
-    background: var(--gold-bright);
-    color: var(--navy-deep);
-    font-size: 11.5px;
+    background: var(--gold-foil);
+    color: var(--navy-950);
+    font-size: 10.5px;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 11px;
     border-radius: 99px;
     text-decoration: none;
     margin-bottom: 8px;
-    box-shadow: 0 6px 14px rgba(255, 206, 27, 0.28);
+    box-shadow: 0 6px 14px rgba(184, 138, 40, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  }
+
+  .mob-coffee-btn svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--navy-950);
+    stroke-width: 2.2;
+    fill: none;
   }
 
   .mob-roof-pill {
-    background: var(--navy-deep);
-    color: #FFFFFF;
-    font-size: 9.5px;
+    background: linear-gradient(90deg, #081328 0%, #112448 50%, #081328 100%);
+    border: 1px solid rgba(214, 174, 78, 0.35);
+    color: #CBD5E1;
+    font-size: 8.5px;
     font-weight: 800;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     padding: 8px;
     border-radius: 99px;
   }
 
   .mob-roof-pill span {
-    color: var(--gold-bright);
+    color: #E8C66A;
   }
 
   .toast {
     position: fixed;
     bottom: 24px;
     right: 28px;
-    background: var(--gold-bright);
-    color: var(--navy-deep);
-    padding: 12px 20px;
+    background: var(--gold-foil);
+    color: var(--navy-950);
+    padding: 12px 22px;
     border-radius: 99px;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 800;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
     display: none;
   }
 </style>
@@ -802,10 +925,10 @@
 <body>
 
 <div class="canvas">
-  <!-- Minimalist Editorial Header -->
+  <!-- Editorial Luxury Header -->
   <header class="hero-bar">
     <div>
-      <div class="eyebrow">Advertising &amp; More · Executive Email Signature</div>
+      <div class="eyebrow">Advertising &amp; More · Bespoke Executive Signature</div>
       <h1 class="hero-title">Good ideas start <em>over coffee.</em></h1>
     </div>
 
@@ -816,88 +939,133 @@
         <button type="button" data-first="Tania" data-last="Hyacinth">Tania Hyacinth</button>
       </div>
       <button type="button" class="btn-copy-main" id="copy-btn">
-        <span>☕ Copy Signature</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        <span>Copy Signature</span>
       </button>
     </div>
   </header>
 
-  <!-- Main Stage: 1 Spacious Desktop Preview + 1 Clean Mobile Preview -->
+  <!-- Main Stage: 1 Spacious Desktop Client + 1 Sartorial Mobile Client -->
   <div class="stage-grid">
     <!-- Left Column: Desktop Email Window -->
     <div class="desktop-window">
       <div class="win-chrome">
-        <div class="win-dots">
-          <span class="r"></span>
-          <span class="y"></span>
-          <span class="g"></span>
+        <div class="win-chrome-left">
+          <div class="win-dots">
+            <span class="r"></span>
+            <span class="y"></span>
+            <span class="g"></span>
+          </div>
+          <div class="win-title">Inbox · Q4 Brand Campaign Proposal</div>
         </div>
-        <div class="win-title">Inbox · Q4 Brand Campaign Proposal</div>
+        <div class="win-badge">Interactive HTML Table · Desktop 640px</div>
       </div>
 
       <div class="win-body">
         <div>
           <div class="mail-meta">
+            <div class="mail-subj">Shall we walk through the campaign routes over coffee this week?</div>
             <div class="mail-from">
               <strong>Tanya Hyacinth</strong> &lt;hello@advertisingandmore.com&gt;
             </div>
-            <div class="mail-subj">Shall we walk through the campaign routes over coffee this week?</div>
           </div>
 
-          <p class="mail-Intro">
+          <p class="mail-intro">
             Hi team, thank you for the brief! We have put together three integrated campaign routes across digital, media buying, and experiential. The deck is attached below.
           </p>
         </div>
 
-        <!-- THE SIGNATURE BLOCK -->
+        <!-- THE COUTURE SIGNATURE BLOCK -->
         <div id="signature-capture">
           <div class="sig-card-outer">
+            <div class="linen-grain"></div>
             <table class="sig-main-table" role="presentation" cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <!-- Left: Iconic Top-Down Coffee Cup Portrait -->
-                <td width="184" valign="middle" align="center" style="width:184px;">
-                  <div class="cup-avatar-wrap">
-                    <div class="steam-group">
-                      <span></span><span></span><span></span>
-                    </div>
-                    <div class="cup-handle"></div>
-                    <div class="cup-saucer">
-                      <div class="cup-inner-rim">
-                        <img src="./assets/tanya-avatar-cream.png" alt="Tanya Hyacinth">
-                      </div>
-                    </div>
-                    <div class="success-seal">
-                      <strong>100%</strong>
-                      <span>Success<br>Rate</span>
-                    </div>
+                <!-- Column 1: 3D Bone-China Cup Portrait + Bezier Steam + Foil Seal -->
+                <td width="186" valign="middle" align="center" style="width:186px;">
+                  <div class="cup-stage">
+                    <!-- Custom Calligraphic Bezier Steam Curves -->
+                    <svg class="steam-svg" viewBox="0 0 64 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 24C13 18 19 12 16 5" stroke="url(#steamGrad)" stroke-width="2" stroke-linecap="round"/>
+                      <path d="M32 26C28 18 36 10 32 2" stroke="url(#steamGrad)" stroke-width="2.4" stroke-linecap="round"/>
+                      <path d="M48 24C45 18 51 12 48 5" stroke="url(#steamGrad)" stroke-width="2" stroke-linecap="round"/>
+                      <defs>
+                        <linearGradient id="steamGrad" x1="32" y1="2" x2="32" y2="26" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#D6AE4E" stop-opacity="0.15"/>
+                          <stop offset="55%" stop-color="#C59B27" stop-opacity="0.85"/>
+                          <stop offset="100%" stop-color="#A67B1E" stop-opacity="0.2"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+
+                    <img class="cup-portrait-img" src="./assets/tanya-couture-cup.png" alt="Tanya Hyacinth">
+
+                    <!-- Embossed Metallic Gold Foil Rosette Seal -->
+                    <svg class="foil-seal" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="foilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#FAF0D7"/>
+                          <stop offset="35%" stop-color="#DFB858"/>
+                          <stop offset="70%" stop-color="#AC7F1E"/>
+                          <stop offset="100%" stop-color="#E6C56E"/>
+                        </linearGradient>
+                      </defs>
+                      <circle cx="50" cy="50" r="46" fill="url(#foilGrad)" stroke="#FFFDF9" stroke-width="3"/>
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="#09162E" stroke-width="1.2" stroke-dasharray="3 2.5" opacity="0.55"/>
+                      <text x="50" y="47" text-anchor="middle" fill="#09162E" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.5">100%</text>
+                      <text x="50" y="61" text-anchor="middle" fill="#09162E" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="9.5" letter-spacing="1.2">SUCCESS</text>
+                      <text x="50" y="72" text-anchor="middle" fill="#09162E" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="8.5" letter-spacing="1.4">RATE</text>
+                    </svg>
                   </div>
                 </td>
 
-                <!-- Center: Clean, Spacious Executive Bio -->
+                <!-- Column 2: Editorial Bio & Custom 1.5px Vector Contact Matrix -->
                 <td class="bio-col" valign="middle">
-                  <div class="script-greeting">Cheers &amp; coffee soon,</div>
+                  <div class="calligraphy-row">
+                    <span class="calligraphy-greeting">Cheers &amp; coffee soon,</span>
+                    <svg class="calligraphy-flourish" viewBox="0 0 140 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 7.5C38 2.2 88 1.8 138 6.2" stroke="url(#penGrad)" stroke-width="1.8" stroke-linecap="round"/>
+                      <defs>
+                        <linearGradient id="penGrad" x1="2" y1="5" x2="138" y2="5" gradientUnits="userSpaceOnUse">
+                          <stop offset="0%" stop-color="#C59B27"/>
+                          <stop offset="75%" stop-color="#D6AE4E" stop-opacity="0.65"/>
+                          <stop offset="100%" stop-color="#D6AE4E" stop-opacity="0"/>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+
                   <div class="exec-name">
                     <span class="js-first">Tanya Hyacinth</span><br>
-                    <em class="js-last" style="font-weight:600;font-style:italic;">D’Silva-Fernandez</em>
+                    <span class="last-name js-last">D’Silva-Fernandez</span>
                   </div>
                   <div class="exec-role">Chief Executive Officer &nbsp;·&nbsp; Advertising &amp; More</div>
 
-                  <div class="bean-divider">
-                    <span class="line-gold"></span>
-                    <span class="bean-dot"></span>
-                    <span class="line-soft"></span>
+                  <div class="luxury-divider">
+                    <span class="gold-bar"></span>
+                    <!-- Custom Vector Coffee Bean Icon -->
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <ellipse cx="12" cy="12" rx="8.5" ry="6" transform="rotate(-28 12 12)" stroke="#9A7220" stroke-width="1.8"/>
+                      <path d="M6.5 15C10.5 14 13.5 10 17.5 9" stroke="#9A7220" stroke-width="1.6" stroke-linecap="round"/>
+                    </svg>
+                    <span class="hairline"></span>
                   </div>
 
                   <table class="contact-grid" role="presentation" cellpadding="0" cellspacing="0" border="0">
                     <tr>
                       <td>
                         <a class="contact-link" href="tel:+60123456789">
-                          <span class="icon-box">✆</span>
+                          <span class="svg-icon-box">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                          </span>
                           <span>+60 12-345 6789</span>
                         </a>
                       </td>
                       <td>
                         <a class="contact-link" href="https://advertisingandmore.com" target="_blank">
-                          <span class="icon-box">🌐</span>
+                          <span class="svg-icon-box">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                          </span>
                           <span>advertisingandmore.com</span>
                         </a>
                       </td>
@@ -905,32 +1073,44 @@
                     <tr>
                       <td style="padding-top:10px;">
                         <a class="contact-link" href="mailto:hello@advertisingandmore.com">
-                          <span class="icon-box">✉</span>
+                          <span class="svg-icon-box">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                          </span>
                           <span>hello@advertisingandmore.com</span>
                         </a>
                       </td>
                       <td style="padding-top:10px;">
-                        <div class="social-Cluster">
-                          <a class="soc-pill" href="https://advertisingandmore.com" target="_blank">f</a>
-                          <a class="soc-pill" href="https://advertisingandmore.com" target="_blank">in</a>
-                          <a class="soc-pill" href="https://wa.me/60123456789" target="_blank">wa</a>
+                        <div class="social-row">
+                          <a class="soc-badge" href="https://advertisingandmore.com" target="_blank" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                          </a>
+                          <a class="soc-badge" href="https://advertisingandmore.com" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                          </a>
+                          <a class="soc-badge" href="https://wa.me/60123456789" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                          </a>
                         </div>
                       </td>
                     </tr>
                   </table>
                 </td>
 
-                <!-- Right: Perforated Coffee Ticket Stub -->
-                <td width="204" valign="middle" align="center" style="width:204px;">
+                <!-- Column 3: Sartorial Midnight Navy & Gold Foil Coffee Pass -->
+                <td width="196" valign="middle" align="center" style="width:196px;">
                   <div class="coffee-ticket">
-                    <div class="ticket-header">☕ Coffee Ticket</div>
-                    <a class="ticket-qr-box" href="https://advertisingandmore.com/#contactform" target="_blank">
-                      <img src="./assets/qr-coffee-navy.png" alt="Scan for Coffee">
+                    <div class="ticket-header">
+                      <svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>
+                      <span>Coffee Pass</span>
+                    </div>
+                    <a class="ticket-qr-frame" href="https://advertisingandmore.com/#contactform" target="_blank">
+                      <img src="./assets/qr-luxury-navy.png" alt="Scan for Coffee">
                     </a>
                     <div class="ticket-perf"></div>
                     <a class="ticket-cta" href="https://advertisingandmore.com/#contactform" target="_blank">
-                      <img src="./assets/coffee-cup.png" width="16" height="16" alt="" style="width:16px;height:16px;">
-                      <span>Click For Coffee →</span>
+                      <img src="./assets/coffee-cup.png" width="15" height="15" alt="" style="width:15px;height:15px;">
+                      <span>Click For Coffee</span>
+                      <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                     </a>
                   </div>
                 </td>
@@ -938,15 +1118,16 @@
             </table>
           </div>
 
-          <!-- Bottom Pill Bar -->
-          <div class="agency-pill-bar">
-            <div class="agency-pill-left">
+          <!-- Bottom Sartorial Midnight & Gold Foil Ribbon -->
+          <div class="agency-ribbon">
+            <div class="ribbon-left">
               <img src="./assets/coffee-cup.png" alt="A&M Coffee">
-              <div class="agency-brand-name">Advertising <span>&amp; More</span></div>
-              <div class="agency-roof-tag">Everything You Need, <strong>Under One Happy Roof</strong></div>
+              <div class="ribbon-brand">Advertising <em>&amp; More</em></div>
+              <div class="ribbon-tagline">Everything You Need, <strong>Under One Happy Roof</strong></div>
             </div>
-            <a class="agency-pill-cta" href="https://advertisingandmore.com/#contactform" target="_blank">
-              Book a free strategy coffee →
+            <a class="ribbon-cta" href="https://advertisingandmore.com/#contactform" target="_blank">
+              <span>Book a private strategy coffee</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
         </div>
@@ -955,7 +1136,10 @@
 
     <!-- Right Column: Mobile View -->
     <div class="mobile-col">
-      <div class="mobile-label">Mobile View · 375 PX</div>
+      <div class="mobile-label">
+        <span>Mobile View</span>
+        <strong>iOS Mail · 375 PX</strong>
+      </div>
       <div class="iphone-frame">
         <div class="iphone-screen">
           <div>
@@ -968,30 +1152,43 @@
           </div>
 
           <div class="mob-sig-card">
-            <div class="mob-avatar">
-              <img src="./assets/tanya-avatar-cream.png" alt="Tanya Hyacinth">
-            </div>
-            <div class="mob-greeting">Cheers &amp; coffee soon,</div>
-            <div class="mob-name">
-              <span class="js-first">Tanya Hyacinth</span><br>
-              <em class="js-last" style="font-weight:600;font-style:italic;">D’Silva-Fernandez</em>
-            </div>
-            <div class="mob-role">Chief Executive Officer</div>
-
-            <div class="mob-quick-btns">
-              <a class="mob-qbtn" href="tel:+60123456789" title="Call">✆</a>
-              <a class="mob-qbtn" href="mailto:hello@advertisingandmore.com" title="Email">✉</a>
-              <a class="mob-qbtn" href="https://advertisingandmore.com" target="_blank" title="Website">🌐</a>
-              <a class="mob-qbtn" href="https://advertisingandmore.com" target="_blank" title="LinkedIn">in</a>
+            <div>
+              <div class="mob-avatar">
+                <img src="./assets/tanya-avatar-luxury.png" alt="Tanya Hyacinth">
+              </div>
+              <div class="mob-greeting">Cheers &amp; coffee soon,</div>
+              <div class="mob-name">
+                <span class="js-first">Tanya Hyacinth</span><br>
+                <em class="js-last">D’Silva-Fernandez</em>
+              </div>
+              <div class="mob-role">Chief Executive Officer</div>
             </div>
 
-            <a class="mob-coffee-btn" href="https://advertisingandmore.com/#contactform" target="_blank">
-              <img src="./assets/coffee-cup.png" width="16" height="16" alt="" style="width:16px;height:16px;">
-              <span>Click For Coffee →</span>
-            </a>
+            <div>
+              <div class="mob-quick-btns">
+                <a class="mob-qbtn" href="tel:+60123456789" aria-label="Call">
+                  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </a>
+                <a class="mob-qbtn" href="mailto:hello@advertisingandmore.com" aria-label="Email">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+                <a class="mob-qbtn" href="https://advertisingandmore.com" target="_blank" aria-label="Website">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </a>
+                <a class="mob-qbtn" href="https://advertisingandmore.com" target="_blank" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+              </div>
 
-            <div class="mob-roof-pill">
-              Under One <span>Happy Roof</span>
+              <a class="mob-coffee-btn" href="https://advertisingandmore.com/#contactform" target="_blank">
+                <img src="./assets/coffee-cup.png" width="15" height="15" alt="" style="width:15px;height:15px;">
+                <span>Click For Coffee</span>
+                <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+
+              <div class="mob-roof-pill">
+                Under One <span>Happy Roof</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1015,7 +1212,7 @@
     });
   });
 
-  document.getElementById('copy-btn').addEventListener('click', async () => {
+  document.getElementById('copy-btn').addEventListener('click', () => {
     const el = document.getElementById('signature-capture');
     const range = document.createRange();
     range.selectNodeContents(el);
